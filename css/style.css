@@ -1,0 +1,256 @@
+/* 
+   Edward Kings Academy - Premium Stylesheet
+   Theme: Academic Excellence (Deep Forest Green, Royal Gold, & Soft Silk)
+*/
+
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700&family=Playfair+Display:ital,wght@0,700;0,900;1,700&display=swap');
+
+:root {
+    --primary-green: #0a2f1c; /* Deeper Green */
+    --secondary-green: #1a472a;
+    --accent-gold: #D4AF37; /* Royal Gold */
+    --accent-gold-light: #F1D279;
+    --light-cream: #FDFBF0;
+    --dark-text: #1a2a1b;
+    --muted-text: #5d6d5e;
+    --white: #ffffff;
+    --glass-bg: rgba(255, 255, 255, 0.85);
+    --transition-slow: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    --transition: all 0.3s ease;
+    --shadow-sm: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.05);
+    --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+}
+
+/* Base Styles */
+body {
+    font-family: 'Outfit', sans-serif; /* Modern, cleaner font */
+    background-color: var(--white);
+    color: var(--dark-text);
+    line-height: 1.7;
+    overflow-x: hidden;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 900;
+    letter-spacing: -0.02em;
+}
+
+.text-gold { color: var(--accent-gold); }
+.bg-primary-green { background-color: var(--primary-green) !important; }
+
+/* Custom Scrollbar */
+::-webkit-scrollbar { width: 10px; }
+::-webkit-scrollbar-track { background: var(--light-cream); }
+::-webkit-scrollbar-thumb { background: var(--primary-green); border-radius: 5px; }
+
+/* Navbar */
+.navbar {
+    background: transparent;
+    transition: var(--transition-slow);
+    padding: 1.5rem 0;
+    backdrop-filter: blur(10px);
+}
+
+.navbar.scrolled {
+    background: var(--glass-bg);
+    padding: 0.8rem 0;
+    box-shadow: var(--shadow-sm);
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+.navbar-brand img {
+    height: 70px;
+    transition: var(--transition-slow);
+}
+
+.navbar.scrolled .navbar-brand img {
+    height: 55px;
+}
+
+.nav-link {
+    color: var(--white) !important;
+    font-weight: 500;
+    margin: 0 12px;
+    font-size: 0.95rem;
+    transition: var(--transition);
+}
+
+.navbar.scrolled .nav-link {
+    color: var(--primary-green) !important;
+}
+
+.nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 0;
+    height: 2px;
+    background: var(--accent-gold);
+    transition: var(--transition);
+}
+
+.nav-link:hover::after { width: 80%; }
+
+.btn-admission {
+    background: linear-gradient(135deg, var(--primary-green), var(--secondary-green));
+    color: var(--white) !important;
+    border: none;
+    border-radius: 4px; /* More modern than pill */
+    padding: 12px 30px;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    font-size: 0.85rem;
+    transition: var(--transition-slow);
+    box-shadow: 0 4px 15px rgba(10, 47, 28, 0.2);
+}
+
+.btn-admission:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 25px rgba(10, 47, 28, 0.3);
+}
+
+/* Hero Section */
+.hero {
+    height: 100vh;
+    background: linear-gradient(rgba(10, 47, 28, 0.8), rgba(10, 47, 28, 0.4)), url('../assets/image.png');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    color: var(--white);
+    position: relative;
+    clip-path: polygon(0 0, 100% 0, 100% 95%, 0 100%);
+}
+
+.hero-content {
+    animation: float 6s ease-in-out infinite;
+}
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-20px); }
+}
+
+.hero h1 {
+    font-size: 5rem;
+    line-height: 1.1;
+    margin-bottom: 2rem;
+    text-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.hero p {
+    font-size: 1.4rem;
+    font-weight: 300;
+    margin-bottom: 3rem;
+    opacity: 0.9;
+}
+
+/* Feature Cards */
+.feature-card {
+    background: var(--white);
+    padding: 50px 40px;
+    border-radius: 2px;
+    border: 1px solid rgba(0,0,0,0.03);
+    box-shadow: var(--shadow-md);
+    transition: var(--transition-slow);
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0;
+    width: 4px; height: 0;
+    background: var(--accent-gold);
+    transition: var(--transition-slow);
+}
+
+.feature-card:hover {
+    transform: translateY(-15px);
+    box-shadow: var(--shadow-lg);
+}
+
+.feature-card:hover::before { height: 100%; }
+
+.feature-icon {
+    font-size: 3.5rem;
+    background: linear-gradient(135deg, var(--primary-green), var(--accent-gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    margin-bottom: 30px;
+}
+
+/* Section Styling */
+.section-padding { padding: 120px 0; }
+
+.section-title h2 {
+    font-size: 3rem;
+    color: var(--primary-green);
+    margin-bottom: 25px;
+}
+
+.section-title p {
+    color: var(--muted-text);
+    font-size: 1.1rem;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+/* Gallery */
+.gallery-img {
+    height: 350px;
+    width: 100%;
+    object-fit: cover;
+    border-radius: 4px;
+    transition: var(--transition-slow);
+    filter: grayscale(20%);
+}
+
+.gallery-img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.02);
+    box-shadow: var(--shadow-lg);
+}
+
+/* Footer */
+footer {
+    background: var(--primary-green);
+    color: rgba(255,255,255,0.7);
+    padding: 100px 0 50px;
+    font-size: 0.95rem;
+}
+
+.footer-brand {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: var(--white);
+    margin-bottom: 30px;
+    display: block;
+}
+
+.footer-links h5 {
+    color: var(--accent-gold);
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    letter-spacing: 0.2em;
+    margin-bottom: 30px;
+}
+
+.footer-links a:hover {
+    color: var(--accent-gold) !important;
+    transform: translateX(5px);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .hero h1 { font-size: 3.5rem; }
+    .nav-link { color: var(--primary-green) !important; }
+    .navbar { background: var(--white); padding: 1rem 0; }
+}
