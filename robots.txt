@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://edwardkings.ac.ke/sitemap.xml
