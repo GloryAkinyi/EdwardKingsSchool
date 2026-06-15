@@ -1,358 +1,840 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Edward Kings Junior and Secondary School - Providing world-class education for a global future. Located in Jomvu-Jitoni, Mombasa. Join us for academic excellence, innovation, and integrity.">
-    <meta name="keywords" content="Edward Kings, Edward Kings School, Edward Kings Junior School, Edward Kings Secondary School, Mombasa schools, Jomvu-Jitoni schools, academic excellence Kenya, CBC curriculum Mombasa">
-    <meta name="author" content="Edward Kings Academy">
-    <link rel="canonical" href="https://edwardkings.ac.ke/">
-    
-    <!-- Open Graph / Facebook -->
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://edwardkings.ac.ke/">
-    <meta property="og:title" content="Edward Kings Junior & Secondary School | Excellence • Wisdom • Knowledge">
-    <meta property="og:description" content="Nurturing global leaders through excellence. Providing top-tier education in Mombasa since our foundation.">
-    <meta property="og:image" content="assets/logo.png">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Edward Kings Junior & Secondary School | Excellence • Wisdom • Knowledge</title>
+  <meta name="description" content="Edward Kings Academy offers a premium educational experience from PP1 foundation to Secondary School. Building future leaders, innovators, and global citizens in Mombasa, Kenya.">
+  
+  <!-- Favicon -->
+  <link href="assets/logo.png" rel="icon">
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin>
+  
+  <!-- Vendor CSS Files -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/glightbox/dist/css/glightbox.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" rel="stylesheet">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://edwardkings.ac.ke/">
-    <meta property="twitter:title" content="Edward Kings Junior & Secondary School | Excellence • Wisdom • Knowledge">
-    <meta property="twitter:description" content="Nurturing global leaders through excellence. Providing top-tier education in Mombasa since our foundation.">
-    <meta property="twitter:image" content="assets/logo.png">
-
-    <title>Edward Kings Junior and Secondary School | Academic Excellence</title>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/logo.png">
-
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-    
-    <!-- Font Awesome -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="css/style.css">
-    
-    <!-- AOS Animation -->
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <!-- Main CSS File -->
+  <link href="css/style.css" rel="stylesheet">
 </head>
-<body>
 
-    <!-- Header / Navbar -->
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="assets/logo.png" alt="Edward Kings Logo" class="me-2">
-                <div class="brand-text d-none d-sm-block">
-                    <span class="d-block fw-bold text-white scrolled-dark" style="font-size: 1.4rem; line-height: 1; letter-spacing: 1px;">EDWARD KINGS</span>
-                    <span class="text-gold" style="font-size: 0.75rem; text-transform: uppercase; letter-spacing: 2px;">Junior & Secondary School</span>
-                </div>
-            </a>
-            <button class="navbar-toggler bg-white" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#about">Philosophy</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#academics">Academics</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#gallery">Moments</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                    <li class="nav-item ms-lg-4">
-                        <a href="#admissions" class="btn btn-admission">Enrollment</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<body class="index-page">
+
+  <!-- Topbar -->
+  <div class="topbar d-none d-md-block">
+    <div class="container d-flex justify-content-between align-items-center">
+      <div class="contact-info">
+        <i class="bi bi-phone-fill me-2"></i> +254 724 513928
+        <span class="ms-4"><i class="bi bi-clock-fill me-2"></i> Mon - Fri: 8:00 AM - 4:30 PM</span>
+      </div>
+      <div class="topbar-alerts">
+        <span>Admissions Open | Enroll Today</span>
+      </div>
+    </div>
+  </div>
+
+  <!-- Header -->
+  <header id="header" class="header sticky-top d-flex align-items-center">
+    <div class="container d-flex align-items-center justify-content-between">
+
+      <a href="index.html" class="logo d-flex align-items-center">
+        <h1>Edward <span>Kings</span></h1>
+      </a>
+
+      <nav id="navmenu" class="navmenu">
+        <ul class="d-flex align-items-center m-0">
+          <li><a href="#" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#academics">Academics</a></li>
+          <li><a href="#life">School Life</a></li>
+          <li><a href="#admissions">Admissions</a></li>
+          <li><a href="#contact">Contact</a></li>
+          <li><a href="#admissions" class="btn-admission">Apply Now</a></li>
+        </ul>
+        <i class="mobile-nav-toggle d-xl-none fa-solid fa-bars"></i>
+      </nav>
+
+    </div>
+  </header>
+
+  <main class="main">
 
     <!-- Hero Section -->
-    <section class="hero" id="home">
+    <section id="hero" class="hero section dark-background">
+      <div class="hero-container">
+        <!-- Parallax Background Image -->
+        <img src="assets/2021-10-09.jpg" alt="Edward Kings School" class="hero-image-bg">
+        <div class="overlay"></div>
         <div class="container">
-            <div class="row">
-                <div class="col-lg-10 mx-auto text-center" data-aos="fade-up">
-                    <div class="hero-content">
-                        <span class="text-gold fw-semibold mb-4 d-block" style="letter-spacing: 5px; text-transform: uppercase; font-size: 0.9rem;">Excellence • Wisdom • Knowledge</span>
-                        <h1>Nurturing Global Leaders Through Excellence</h1>
-                        <p>Empowering students to be world-class leaders and future solvers through academic excellence, innovation, and unwavering integrity.</p>
-                        <div class="d-flex justify-content-center gap-4 mt-5">
-                            <a href="#about" class="btn btn-admission">Discover Our Story</a>
-                            <a href="#contact" class="btn btn-outline-light px-5 py-3 rounded-0 border-2 text-uppercase fw-bold" style="font-size: 0.8rem; letter-spacing: 2px;">Talk to us</a>
-                        </div>
-                    </div>
+          <div class="row align-items-center gy-5">
+            <div class="col-lg-7" data-aos="zoom-out" data-aos-delay="100">
+              <div class="hero-content">
+                <h1>Building Future Leaders, <span>Innovators & Global Citizens</span></h1>
+                <p>A premium educational experience nurturing character, excellence, and wisdom from PP1 to Secondary School.</p>
+                <div class="cta-buttons">
+                  <a href="#admissions" class="btn-get-started">Start Your Journey</a>
+                  <a href="#about" class="btn-watch-video"><i class="bi bi-arrow-right-circle"></i> Discover More</a>
                 </div>
+              </div>
             </div>
+            
+            <div class="col-lg-5" data-aos="zoom-out" data-aos-delay="200">
+              <div class="stats-card">
+                <div class="stats-header">
+                  <h3>Why Choose Us</h3>
+                  <div class="decoration-line"></div>
+                </div>
+                <div class="stats-grid">
+                  <div class="stat-item">
+                    <div class="stat-icon">
+                      <i class="bi bi-trophy-fill"></i>
+                    </div>
+                    <div class="stat-content">
+                      <h4>20+ Years</h4>
+                      <p>Of Academic Excellence</p>
+                    </div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-icon">
+                      <i class="bi bi-people-fill"></i>
+                    </div>
+                    <div class="stat-content">
+                      <h4>1500+</h4>
+                      <p>Active Learners</p>
+                    </div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-icon">
+                      <i class="bi bi-mortarboard-fill"></i>
+                    </div>
+                    <div class="stat-content">
+                      <h4>100%</h4>
+                      <p>Qualified & Caring Teachers</p>
+                    </div>
+                  </div>
+                  <div class="stat-item">
+                    <div class="stat-icon">
+                      <i class="bi bi-building-fill"></i>
+                    </div>
+                    <div class="stat-content">
+                      <h4>40+</h4>
+                      <p>Co-Curricular Pathways</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </div>
 
-    <!-- Vision & Mission -->
-    <section class="section-padding bg-light">
+      <!-- Hero Announcement Ticker -->
+      <div class="event-ticker">
         <div class="container">
-            <div class="row g-5">
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-eye"></i></div>
-                        <h3>Our Vision</h3>
-                        <p class="text-muted">To provide quality education that empowers our students to be world class leaders and future solvers. We believe in a future shaped by wisdom and guided by knowledge.</p>
-                    </div>
-                </div>
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="feature-card">
-                        <div class="feature-icon"><i class="fas fa-bullseye"></i></div>
-                        <h3>Our Mission</h3>
-                        <p class="text-muted">To create a conducive environment for holistic learning and character building through academic excellence, innovation and integrity. Our mission is the compass for every student's journey.</p>
-                    </div>
-                </div>
+          <div class="row gy-3">
+            <div class="col-md-4 ticker-item" data-aos="fade-up" data-aos-delay="100">
+              <span class="date">Open</span>
+              <span class="title">Admissions PP1 - PP2</span>
+              <a href="#admissions" class="btn-register">Register</a>
             </div>
+            <div class="col-md-4 ticker-item" data-aos="fade-up" data-aos-delay="200">
+              <span class="date">Ongoing</span>
+              <span class="title">Primary Grades 1-6 Intake</span>
+              <a href="#admissions" class="btn-register">Apply</a>
+            </div>
+            <div class="col-md-4 ticker-item" data-aos="fade-up" data-aos-delay="300">
+              <span class="date">Junior</span>
+              <span class="title">Junior Secondary Assessment</span>
+              <a href="#admissions" class="btn-register">Enroll</a>
+            </div>
+          </div>
         </div>
+      </div>
     </section>
 
     <!-- About Section -->
-    <section class="section-padding" id="about">
-        <div class="container">
-            <div class="row align-items-center">
-                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="zoom-out">
-                    <div class="position-relative">
-                        <img src="assets/2021-10-09.jpg" alt="Edward Kings School Building" class="img-fluid border-start border-5 border-gold shadow-lg p-3 bg-white" style="border-color: var(--accent-gold) !important;">
-                        <div class="position-absolute -bottom-10 -right-10 bg-primary-green p-5 shadow-lg d-none d-lg-block" style="transform: translate(20px, -40px);">
-                            <h2 class="text-white mb-0" style="font-size: 3.5rem;">20+</h2>
-                            <p class="text-gold mb-0 fw-bold">Years of Merit</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 ps-lg-5" data-aos="fade-left">
-                    <div class="section-title text-start mb-4">
-                        <span class="text-gold text-uppercase fw-bold" style="letter-spacing: 3px; font-size: 0.8rem;">About Edward Kings</span>
-                        <h2 class="display-5">Nurturing the Next Generation</h2>
-                    </div>
-                    <p class="lead fw-normal text-secondary mb-4">Edward Kings Academy is more than just a school; it's a sanctuary for the curious mind and a community dedicated to holistic growth.</p>
-                    <p>Located in the heart of Jomvu-Jitoni, Mombasa, we provide a safe and stimulating environment where Curiosity meets Knowledge. Our team of certified educators is committed to delivering the Kenyan Competency-Based Curriculum (CBC) with a global perspective.</p>
-                    <div class="row mt-5">
-                        <div class="col-sm-6 mb-4">
-                            <div class="d-flex align-items-center">
-                                <div class="bg-primary-green p-2 me-3 rounded-1"><i class="fas fa-microscope text-gold"></i></div>
-                                <span class="fw-bold">Modern Analytics</span>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 mb-4">
-                            <div class="d-flex align-items-center">
-                                <div class="bg-primary-green p-2 me-3 rounded-1"><i class="fas fa-heart text-gold"></i></div>
-                                <span class="fw-bold">Character Focus</span>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 mb-4">
-                            <div class="d-flex align-items-center">
-                                <div class="bg-primary-green p-2 me-3 rounded-1"><i class="fas fa-users-cog text-gold"></i></div>
-                                <span class="fw-bold">Expert Faculty</span>
-                            </div>
-                        </div>
-                        <div class="col-sm-6 mb-4">
-                            <div class="d-flex align-items-center">
-                                <div class="bg-primary-green p-2 me-3 rounded-1"><i class="fas fa-globe text-gold"></i></div>
-                                <span class="fw-bold">Global Reach</span>
-                            </div>
-                        </div>
-                    </div>
-                    <a href="#admissions" class="btn btn-admission mt-4">Admissions Information</a>
-                </div>
+    <section id="about" class="about section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row mb-5 align-items-center">
+          
+          <div class="col-lg-6 pe-lg-5" data-aos="fade-right" data-aos-delay="200">
+            <h2 class="display-6 fw-bold mb-4">Welcome to <span>Edward Kings School</span></h2>
+            <p class="lead mb-4">We nurture excellence, character, leadership, and innovation through a modern, learner-centered educational approach.</p>
+            <p class="mb-4 text-muted">For over two decades, we have been committed to providing a transformative educational experience that prepares students for success in a rapidly evolving global society.</p>
+            
+            <div class="d-flex flex-wrap gap-4 mb-4">
+              <div class="stat-box">
+                <span class="stat-number"><span data-purecounter-start="0" data-purecounter-end="20" data-purecounter-duration="1" class="purecounter">0</span>+</span>
+                <span class="stat-label">Years of Honor</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number"><span data-purecounter-start="0" data-purecounter-end="1500" data-purecounter-duration="1" class="purecounter">0</span>+</span>
+                <span class="stat-label">Happy Learners</span>
+              </div>
+              <div class="stat-box">
+                <span class="stat-number"><span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1" class="purecounter">0</span>%</span>
+                <span class="stat-label">Qualified Staff</span>
+              </div>
             </div>
+          </div>
+
+          <!-- NiceSchool Image Stack -->
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+            <div class="image-stack">
+              <div class="image-stack-item image-stack-item-top" data-aos="zoom-in" data-aos-delay="400">
+                <img src="assets/2021-10-09.jpg" alt="School Life Top" class="rounded-4">
+              </div>
+              <div class="image-stack-item image-stack-item-bottom" data-aos="zoom-in" data-aos-delay="500">
+                <img src="assets/image.png" alt="School Life Bottom" class="rounded-4">
+              </div>
+            </div>
+          </div>
+
         </div>
+
+        <!-- Mission, Vision, Values Row -->
+        <div class="row mission-vision-row g-4 mt-4">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="value-card h-100">
+              <div class="card-icon">
+                <i class="bi bi-rocket-takeoff-fill"></i>
+              </div>
+              <h3>Our Mission</h3>
+              <p>To create a transformative, learner-centered educational experience that prepares learners for success and service in an evolving world.</p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="value-card h-100">
+              <div class="card-icon">
+                <i class="bi bi-eye-fill"></i>
+              </div>
+              <h3>Our Vision</h3>
+              <p>To be a premier institution of academic distinction and character development, nurturing future leaders and innovators.</p>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="value-card h-100">
+              <div class="card-icon">
+                <i class="bi bi-star-fill"></i>
+              </div>
+              <h3>Our Values</h3>
+              <p>Rooted in Excellence, Wisdom, Knowledge, Leadership, Integrity, and Innovation in all our undertakings.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </section>
 
-    <!-- Academics Section -->
-    <section class="section-padding bg-light" id="academics">
-        <div class="container">
-            <div class="section-title text-center mb-5">
-                <span class="text-gold text-uppercase fw-bold" style="letter-spacing: 3px; font-size: 0.8rem;">Scholastic Pathways</span>
-                <h2>Our Academic Programs</h2>
-            </div>
-            <div class="row g-4 text-center">
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                    <div class="feature-card">
-                        <h3 class="mb-3">Junior Secondary</h3>
-                        <p class="text-gold fw-bold mb-4" style="font-size: 0.9rem;">Grades 7, 8, & 9 (CBC)</p>
-                        <p>A seamless transition focusing on skill-based learning, integrated sciences, and pre-technical studies to prepare students for senior pathways in a rapidly evolving world.</p>
-                        <hr class="w-25 mx-auto my-4 border-gold">
-                        <ul class="list-unstyled d-flex justify-content-center gap-3 text-muted" style="font-size: 0.8rem;">
-                            <li><i class="fas fa-check text-gold me-1"></i> Technical</li>
-                            <li><i class="fas fa-check text-gold me-1"></i> Arts</li>
-                            <li><i class="fas fa-check text-gold me-1"></i> Science</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                    <div class="feature-card">
-                        <h3 class="mb-3">Secondary School</h3>
-                        <p class="text-gold fw-bold mb-4" style="font-size: 0.9rem;">KCSE Curriculum</p>
-                        <p>Rigorous academic preparation focusing on core subjects, innovation, and character development for national excellence and entry into world-class universities.</p>
-                        <hr class="w-25 mx-auto my-4 border-gold">
-                        <ul class="list-unstyled d-flex justify-content-center gap-3 text-muted" style="font-size: 0.8rem;">
-                            <li><i class="fas fa-check text-gold me-1"></i> Leadership</li>
-                            <li><i class="fas fa-check text-gold me-1"></i> Ethics</li>
-                            <li><i class="fas fa-check text-gold me-1"></i> Merit</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+    <!-- Why Parents Choose Us Section -->
+    <section class="section section-bg">
+      <div class="container">
+        
+        <div class="section-title" data-aos="fade-up">
+          <h2>Why Parents Choose Us</h2>
+          <p>We provide a premium, modern academic infrastructure designed for holistic development.</p>
         </div>
+
+        <div class="row g-4 text-center">
+          <div class="col-md-3" data-aos="zoom-in" data-aos-delay="100">
+            <div class="feature-box">
+              <div class="icon"><i class="fas fa-laptop-code"></i></div>
+              <h4>Digital Learning</h4>
+              <p>Modern ICT facilities, computer literacy classes, and interactive digital resources.</p>
+            </div>
+          </div>
+          <div class="col-md-3" data-aos="zoom-in" data-aos-delay="200">
+            <div class="feature-box">
+              <div class="icon"><i class="fas fa-microscope"></i></div>
+              <h4>STEM Education</h4>
+              <p>Hands-on practical experiments, scientific inquiry, and logic building.</p>
+            </div>
+          </div>
+          <div class="col-md-3" data-aos="zoom-in" data-aos-delay="300">
+            <div class="feature-box">
+              <div class="icon"><i class="fas fa-user-graduate"></i></div>
+              <h4>Academic Excellence</h4>
+              <p>Proven track record of success in national examinations and assessments.</p>
+            </div>
+          </div>
+          <div class="col-md-3" data-aos="zoom-in" data-aos-delay="400">
+            <div class="feature-box">
+              <div class="icon"><i class="fas fa-users"></i></div>
+              <h4>Leadership & Character</h4>
+              <p>Guidance counseling, student councils, and leadership bootcamps for learners.</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </section>
 
-    <!-- Gallery Section -->
-    <section class="section-padding" id="gallery">
-        <div class="container">
-            <div class="section-title text-center mb-5">
-                <span class="text-gold text-uppercase fw-bold" style="letter-spacing: 3px; font-size: 0.8rem;">Visual Narrative</span>
-                <h2>Moments of Excellence</h2>
+    <!-- Academics Pathways Section (Isotope Filtering) -->
+    <section id="academics" class="featured-programs section">
+      
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Academic Pathways</h2>
+        <p>Curricula and learning pathways tailored to each developmental stage.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="isotope-layout" data-default-filter="*" data-layout="masonry" data-sort="original-order">
+          
+          <!-- Filter Buttons -->
+          <ul class="program-filters isotope-filters" data-aos="fade-up" data-aos-delay="150">
+            <li data-filter="*" class="filter-active">All Pathways</li>
+            <li data-filter=".filter-foundation">PP1 - PP2</li>
+            <li data-filter=".filter-primary">Grade 1 - 6</li>
+            <li data-filter=".filter-secondary">Junior & Secondary</li>
+          </ul>
+
+          <div class="row g-4 isotope-container">
+            
+            <!-- Pathway 1 -->
+            <div class="col-lg-4 isotope-item filter-foundation" data-aos="zoom-in" data-aos-delay="100">
+              <div class="program-item">
+                <div class="program-badge">PP1 - PP2</div>
+                <div class="program-image-wrapper">
+                  <img src="assets/2025-05-20.jpg" class="img-fluid" alt="Pre-school Learning">
+                </div>
+                <div class="program-content">
+                  <h3>Early Foundation</h3>
+                  <div class="program-highlights">
+                    <span><i class="bi bi-clock"></i> 2 Years</span>
+                    <span><i class="bi bi-people-fill"></i> Toddler Foundation</span>
+                  </div>
+                  <p>Our preschool program focuses on play-based learning, basic literacy, socialization, and cognitive foundational development.</p>
+                  <a href="#admissions" class="program-btn"><span>Learn More</span> <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
             </div>
+
+            <!-- Pathway 2 -->
+            <div class="col-lg-4 isotope-item filter-primary" data-aos="zoom-in" data-aos-delay="200">
+              <div class="program-item">
+                <div class="program-badge">Grade 1 - 6</div>
+                <div class="program-image-wrapper">
+                  <img src="assets/2024-07-10.png" class="img-fluid" alt="Primary School">
+                </div>
+                <div class="program-content">
+                  <h3>Competency-Based Curriculum</h3>
+                  <div class="program-highlights">
+                    <span><i class="bi bi-clock"></i> 6 Years</span>
+                    <span><i class="bi bi-people-fill"></i> Primary CBC</span>
+                  </div>
+                  <p>Fosters creativity, critical analysis, character values, and academic disciplines aligned with the new CBC framework.</p>
+                  <a href="#admissions" class="program-btn"><span>Learn More</span> <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Pathway 3 -->
+            <div class="col-lg-4 isotope-item filter-secondary" data-aos="zoom-in" data-aos-delay="300">
+              <div class="program-item">
+                <div class="program-badge">Junior & Secondary</div>
+                <div class="program-image-wrapper">
+                  <img src="assets/2026-01-17.jpg" class="img-fluid" alt="High School">
+                </div>
+                <div class="program-content">
+                  <h3>Secondary Education</h3>
+                  <div class="program-highlights">
+                    <span><i class="bi bi-clock"></i> Secondary Years</span>
+                    <span><i class="bi bi-people-fill"></i> Career Ready</span>
+                  </div>
+                  <p>Focuses on advanced mathematics, sciences, humanities, and technical skill pathways for high school candidates.</p>
+                  <a href="#admissions" class="program-btn"><span>Learn More</span> <i class="bi bi-arrow-right"></i></a>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- School Life & Activities Section (Split Layout) -->
+    <section id="life" class="students-life-block section section-bg">
+      
+      <div class="container section-title" data-aos="fade-up">
+        <h2>School Life & Co-curriculars</h2>
+        <p>A vibrant, engaging ecosystem supporting learning outside the classroom.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-center gy-4">
+          
+          <div class="col-lg-6" data-aos="fade-right" data-aos-delay="200">
+            <div class="students-life-img position-relative">
+              <img src="assets/games.jpeg" class="img-fluid rounded-4 shadow-sm" alt="Sports Day">
+              <div class="img-overlay">
+                <h3>Discover School Life</h3>
+                <a href="#contact" class="explore-btn">Book a School Visit <i class="bi bi-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
             <div class="row g-4">
-                <div class="col-lg-4 col-md-6" data-aos="fade-right">
-                    <img src="assets/2025-11-19 (1).jpg" class="img-fluid gallery-img" alt="Graduation Ceremony">
+              
+              <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                <div class="student-activity-item">
+                  <div class="icon-box">
+                    <i class="bi bi-trophy"></i>
+                  </div>
+                  <h4>Sports & Athletics</h4>
+                  <p>Soccer tournaments, basketball leagues, track events, and field sports coaching.</p>
                 </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up">
-                    <img src="assets/2025-10-30 (1).jpg" class="img-fluid gallery-img" alt="Students Field Activities">
+              </div>
+
+              <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                <div class="student-activity-item">
+                  <div class="icon-box">
+                    <i class="bi bi-music-note-beamed"></i>
+                  </div>
+                  <h4>Music & Drama</h4>
+                  <p>Nurturing performance talents in musical instruments, choir, and theatre play acts.</p>
                 </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-left">
-                    <img src="assets/2025-10-30.jpg" class="img-fluid gallery-img" alt="Modern Classroom Learning">
+              </div>
+
+              <div class="col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                <div class="student-activity-item">
+                  <div class="icon-box">
+                    <i class="bi bi-people"></i>
+                  </div>
+                  <h4>Clubs & Societies</h4>
+                  <p>Interactive student debate clubs, creative arts workshops, and environmental scouts.</p>
                 </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-right">
-                    <img src="assets/2025-11-02.jpg" class="img-fluid gallery-img" alt="Student Assembly">
+              </div>
+
+              <div class="col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                <div class="student-activity-item">
+                  <div class="icon-box">
+                    <i class="bi bi-globe-americas"></i>
+                  </div>
+                  <h4>Global Outlook</h4>
+                  <p>Organized regional field excursions, contests, and volunteer community events.</p>
                 </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-up">
-                    <img src="assets/2026-01-17.jpg" class="img-fluid gallery-img" alt="Sports Day">
-                </div>
-                <div class="col-lg-4 col-md-6" data-aos="fade-left">
-                    <img src="assets/2025-11-19 (2).jpg" class="img-fluid gallery-img" alt="Prize Giving">
-                </div>
+              </div>
+
             </div>
+          </div>
+
         </div>
+      </div>
     </section>
 
-    <!-- Contact & Map Section -->
-    <section class="section-padding bg-light" id="contact">
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-5" data-aos="fade-right">
-                    <div class="section-title text-start mb-5">
-                        <span class="text-gold text-uppercase fw-bold" style="letter-spacing: 3px; font-size: 0.8rem;">Connect</span>
-                        <h2 class="display-6">Get In Touch</h2>
-                    </div>
-                    <div class="contact-info">
-                        <div class="d-flex mb-5">
-                            <div class="bg-primary-green p-3 me-4 rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
-                                <i class="fas fa-map-marker-alt text-gold fs-4"></i>
-                            </div>
-                            <div>
-                                <h5 class="fw-bold mb-1">Location</h5>
-                                <p class="text-muted">Jomvu-Jitoni area, Mombasa, Kenya</p>
-                            </div>
-                        </div>
-                        <div class="d-flex mb-5">
-                            <div class="bg-primary-green p-3 me-4 rounded-circle d-flex align-items-center justify-content-center" style="width: 60px; height: 60px;">
-                                <i class="fas fa-phone-alt text-gold fs-4"></i>
-                            </div>
-                            <div>
-                                <h5 class="fw-bold mb-1">Call Center</h5>
-                                <p class="text-muted mb-0">+254 724 513928</p>
-                            </div>
-                        </div>
-                       
-                    </div>
+    <!-- parent testimonials Section (Masonry Testimonials Layout) -->
+    <section class="testimonials section">
+      
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Parent Testimonials</h2>
+        <p>Listen to what our parents say about their experience at Edward Kings School.</p>
+      </div>
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row g-4">
+          
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="testimonial-card">
+              <i class="bi bi-quote quote-icon"></i>
+              <p>"Excellent school environment. My children have grown tremendously both in academic output and general discipline."</p>
+              <div class="user-info">
+                <div class="user-img">P1</div>
+                <div>
+                  <h4>Sarah M.</h4>
+                  <span>Primary School Parent</span>
                 </div>
-                <div class="col-lg-7" data-aos="fade-left">
-                    <div class="bg-white p-5 shadow-lg border-bottom border-5 border-gold">
-                        <form id="contactForm">
-                            <div class="row g-4">
-                                <div class="col-md-6">
-                                    <label class="form-label small text-uppercase fw-bold text-muted" style="letter-spacing: 1px;">Full Name</label>
-                                    <input type="text" class="form-control form-control-lg bg-light border-0 rounded-0" placeholder="e.g. John Doe" required>
-                                </div>
-                                <div class="col-md-6">
-                                    <label class="form-label small text-uppercase fw-bold text-muted" style="letter-spacing: 1px;">Email Address</label>
-                                    <input type="email" class="form-control form-control-lg bg-light border-0 rounded-0" placeholder="e.g. name@email.com" required>
-                                </div>
-                                <div class="col-12">
-                                    <label class="form-label small text-uppercase fw-bold text-muted" style="letter-spacing: 1px;">Message</label>
-                                    <textarea class="form-control form-control-lg bg-light border-0 rounded-0" rows="5" placeholder="How can we help you today?" required></textarea>
-                                </div>
-                                <div class="col-12">
-                                    <button type="submit" class="btn btn-admission w-100 py-3">Send Inquiry</button>
-                                </div>
-                            </div>
-                        </form>
-                    </div>
-                </div>
+              </div>
             </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="testimonial-card">
+              <i class="bi bi-quote quote-icon"></i>
+              <p>"Amazing teachers and school leadership. The individual attention to each learner's talents and gaps has been impressive."</p>
+              <div class="user-info">
+                <div class="user-img">P2</div>
+                <div>
+                  <h4>David O.</h4>
+                  <span>Junior Secondary Parent</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="testimonial-card">
+              <i class="bi bi-quote quote-icon"></i>
+              <p>"A wonderful place for holistic growth. Their Competency-Based Curriculum foundation setup is highly professional."</p>
+              <div class="user-info">
+                <div class="user-img">P3</div>
+                <div>
+                  <h4>Grace K.</h4>
+                  <span>Pre-School Parent</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
         </div>
+      </div>
     </section>
 
-    <!-- Footer -->
-    <footer>
-        <div class="container">
-            <div class="row g-5">
-                <div class="col-lg-5">
-                    <a class="footer-brand d-flex align-items-center text-decoration-none" href="#">
-                        <img src="assets/logo.png" height="80" class="me-3" alt="Logo">
-                        <span class="text-white">EDWARD KINGS</span>
-                    </a>
-                    <p class="pe-lg-5">Edward Kings Academy is a premier educational institution providing world-class education for a global future. Committed to excellence, wisdom, and knowledge since our foundation.</p>
-                    <div class="social-icons mt-4">
-                        <a href="#" class="me-3 fs-5"><i class="fab fa-facebook"></i></a>
-                        <a href="#" class="me-3 fs-5"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="me-3 fs-5"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="fs-5"><i class="fab fa-linkedin"></i></a>
-                    </div>
-                </div>
-                <div class="col-lg-2 footer-links">
-                    <h5>Quick Links</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#home" class="text-white-50 text-decoration-none d-block mb-3">Institutional Home</a></li>
-                        <li><a href="#about" class="text-white-50 text-decoration-none d-block mb-3">Our Philosophy</a></li>
-                        <li><a href="#academics" class="text-white-50 text-decoration-none d-block mb-3">Academic Programs</a></li>
-                        <li><a href="#gallery" class="text-white-50 text-decoration-none d-block mb-3">Moments Gallery</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-2 footer-links">
-                    <h5>Admissions</h5>
-                    <ul class="list-unstyled">
-                        <li><a href="#" class="text-white-50 text-decoration-none d-block mb-3">Process Info</a></li>
-                        <li><a href="#" class="text-white-50 text-decoration-none d-block mb-3">Requirements</a></li>
-                        <li><a href="#" class="text-white-50 text-decoration-none d-block mb-3">Financial Aid</a></li>
-                        <li><a href="#" class="text-white-50 text-decoration-none d-block mb-3">Enroll Today</a></li>
-                    </ul>
-                </div>
-                <div class="col-lg-3">
-                    <h5>Newsletter</h5>
-                    <p class="small">Subscribe to receive institutional updates and academic news.</p>
-                    <div class="input-group mt-4">
-                        <input type="text" class="form-control bg-transparent border-secondary text-white rounded-0" placeholder="Email Address">
-                        <button class="btn btn-gold border-0 rounded-0 bg-gold px-3" type="button" style="background: var(--accent-gold); color: var(--primary-green); font-weight: bold;">Join</button>
-                    </div>
-                </div>
+    <!-- Stats & Achievements Gallery Section -->
+    <section class="stats section section-bg">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        <div class="row align-items-center">
+          
+          <div class="col-lg-5">
+            <div class="stats-overview" data-aos="fade-right" data-aos-delay="200">
+              <h2>Excellence in Education</h2>
+              <p class="lead">Providing state-of-the-art resources and nurturing spaces to build young scholars.</p>
+              <p>Our infrastructure matches international standards, ensuring digital enablement, character development, and fully equipped physical science and computer laboratories.</p>
+              <div class="stats-cta">
+                <a href="#contact" class="btn-admission ms-0">Contact Admission</a>
+                <a href="#life" class="btn-outline">Explore Facilities</a>
+              </div>
             </div>
-            <div class="border-top border-secondary mt-5 pt-4 text-center">
-                <p class="small text-white-50 mb-0">&copy; 2026 Edward Kings Junior and Secondary School. Crafted for Excellence.</p>
-            </div>
-        </div>
-    </footer>
+          </div>
 
-    <!-- Bootstrap JS & Popper -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
-    
-    <!-- AOS Animation JS -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    
-    <!-- Custom JS -->
-    <script src="js/script.js"></script>
-    
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 100
-        });
-    </script>
+          <div class="col-lg-7">
+            <div class="row g-4">
+              
+              <div class="col-md-6" data-aos="zoom-in" data-aos-delay="100">
+                <div class="stats-card">
+                  <div class="stats-icon"><i class="bi bi-people-fill"></i></div>
+                  <div class="stats-number"><span data-purecounter-start="0" data-purecounter-end="1500" data-purecounter-duration="1" class="purecounter">0</span>+</div>
+                  <div class="stats-label">Enrolled Learners</div>
+                </div>
+              </div>
+
+              <div class="col-md-6" data-aos="zoom-in" data-aos-delay="200">
+                <div class="stats-card">
+                  <div class="stats-icon"><i class="bi bi-person-workspace"></i></div>
+                  <div class="stats-number"><span data-purecounter-start="0" data-purecounter-end="15" data-purecounter-duration="1" class="purecounter">0</span>:1</div>
+                  <div class="stats-label">Student-Teacher Ratio</div>
+                </div>
+              </div>
+
+              <div class="col-md-6" data-aos="zoom-in" data-aos-delay="300">
+                <div class="stats-card">
+                  <div class="stats-icon"><i class="bi bi-award-fill"></i></div>
+                  <div class="stats-number"><span data-purecounter-start="0" data-purecounter-end="100" data-purecounter-duration="1" class="purecounter">0</span>%</div>
+                  <div class="stats-label">CBC Assessment Rating</div>
+                </div>
+              </div>
+
+              <div class="col-md-6" data-aos="zoom-in" data-aos-delay="400">
+                <div class="stats-card">
+                  <div class="stats-icon"><i class="bi bi-controller"></i></div>
+                  <div class="stats-number"><span data-purecounter-start="0" data-purecounter-end="40" data-purecounter-duration="1" class="purecounter">0</span>+</div>
+                  <div class="stats-label">Co-Curricular Clubs</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Infrastructure Gallery Grid (Hover-zoom Effect) -->
+        <div class="row mt-5 g-4">
+          
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="achievement-item">
+              <img src="assets/2025-10-30.jpg" alt="Modern Classroom">
+              <div class="achievement-content">
+                <h4>Modern Classrooms</h4>
+                <p>Spacious, well-ventilated, and digitally integrated spaces.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="achievement-item">
+              <img src="assets/2025-11-19.jpg" alt="Computer Lab">
+              <div class="achievement-content">
+                <h4>ICT Laboratory</h4>
+                <p>Equipped workstations for computing and basic computer literacy skills.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="achievement-item">
+              <img src="assets/2026-01-17.jpg" alt="Science Laboratory">
+              <div class="achievement-content">
+                <h4>Science Laboratory</h4>
+                <p>Fully certified setups supporting practical physical sciences.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Admissions Process Section -->
+    <section id="admissions" class="section">
+      <div class="container" data-aos="fade-up">
+        
+        <div class="section-title">
+          <h2>Admissions Process</h2>
+          <p>Enrolling your child at Edward Kings School is simple and streamlined.</p>
+        </div>
+
+        <div class="process-flow">
+          <div class="row g-4">
+            
+            <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="100">
+              <div class="process-step h-100">
+                <div class="step-number">1</div>
+                <h4>Inquiry</h4>
+                <p>Connect with our admissions desk to learn details via our school phone number +254 724 513928.</p>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="200">
+              <div class="process-step h-100">
+                <div class="step-number">2</div>
+                <h4>Visit</h4>
+                <p>Schedule a school walkthrough in Jomvu-Jitoni.</p>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="300">
+              <div class="process-step h-100">
+                <div class="step-number">3</div>
+                <h4>Assessment</h4>
+                <p>Learner check to evaluate capabilities & pathways.</p>
+              </div>
+            </div>
+
+            <div class="col-md-3 col-sm-6" data-aos="fade-up" data-aos-delay="400">
+              <div class="process-step h-100">
+                <div class="step-number">4</div>
+                <h4>Enrollment</h4>
+                <p>Confirm registration & join the Edward Kings family!</p>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq section section-bg">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        
+        <div class="section-title">
+          <h2>Frequently Asked Questions</h2>
+          <p>Common questions parents ask about our institution and policies.</p>
+        </div>
+
+        <div class="row justify-content-center">
+          <div class="col-lg-10">
+            <div class="accordion" id="faqAccordion">
+              
+              <!-- Q1 -->
+              <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+                <h2 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    Which curriculum do you offer?
+                  </button>
+                </h2>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    We offer the Competency-Based Curriculum (CBC) for our Early Foundation and Primary school grades. For older candidates, we offer standard secondary study tracks transitioning into Junior and Senior Secondary stages.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q2 -->
+              <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+                <h2 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Where is the school located?
+                  </button>
+                </h2>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Our school is situated in Jomvu-Jitoni, Mombasa, Kenya. We offer a quiet and secure learning environment away from urban congestion.
+                  </div>
+                </div>
+              </div>
+
+              <!-- Q3 -->
+              <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
+                <h2 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    How are co-curricular programs structured?
+                  </button>
+                </h2>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                  <div class="accordion-body">
+                    Co-curricular sessions are built directly into our weekly timetable. Learners participate in sports clubs, science labs, and performance arts training with dedicated coaches.
+                  </div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Contact Us Section -->
+    <section id="contact" class="contact section">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+        
+        <div class="section-title">
+          <h2>Contact Us</h2>
+          <p>Get in touch with us for directions, inquiries, or enrollment details.</p>
+        </div>
+
+        <div class="row g-4">
+          
+          <div class="col-lg-5">
+            <div class="d-flex flex-column gap-4">
+              
+              <div class="contact-info-card" data-aos="fade-up" data-aos-delay="100">
+                <div class="icon-wrapper"><i class="bi bi-geo-alt-fill"></i></div>
+                <div>
+                  <h4>School Location</h4>
+                  <p>Jomvu-Jitoni, Mombasa, Kenya</p>
+                </div>
+              </div>
+
+              <div class="contact-info-card" data-aos="fade-up" data-aos-delay="200">
+                <div class="icon-wrapper"><i class="bi bi-telephone-fill"></i></div>
+                <div>
+                  <h4>Call Us</h4>
+                  <p>+254 724 513928</p>
+                </div>
+              </div>
+
+              <div class="contact-info-card" data-aos="fade-up" data-aos-delay="300">
+                <div class="icon-wrapper"><i class="bi bi-clock-fill"></i></div>
+                <div>
+                  <h4>School Hours</h4>
+                  <p>Mon - Fri: 8:00 AM - 4:30 PM</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="400">
+            <div class="contact-form-panel">
+              <form id="contactForm" class="d-flex flex-column gap-3">
+                <div class="row g-3">
+                  <div class="col-md-6">
+                    <input type="text" class="form-control" placeholder="Full Name" required>
+                  </div>
+                  <div class="col-md-6">
+                    <input type="tel" class="form-control" placeholder="Phone Number" required>
+                  </div>
+                </div>
+                <input type="text" class="form-control" placeholder="Subject Inquiry" required>
+                <textarea class="form-control" rows="5" placeholder="Message Details" required></textarea>
+                <button type="submit" class="btn-submit">Send Message</button>
+              </form>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-top">
+      <div class="row gy-4">
+        
+        <div class="col-lg-4 col-md-6">
+          <h3>Edward Kings School</h3>
+          <p>Excellence • Wisdom • Knowledge</p>
+          <p class="mt-3">A premier academy developing leaders, innovators, and academic scholars in Mombasa, Kenya.</p>
+          <div class="social-links">
+            <a href="#"><i class="bi bi-twitter-x"></i></a>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-linkedin"></i></a>
+          </div>
+        </div>
+
+        <div class="col-lg-2 col-md-3 footer-links">
+          <h4>Useful Links</h4>
+          <ul>
+            <li><a href="#">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#academics">Academics</a></li>
+            <li><a href="#life">School Life</a></li>
+            <li><a href="#admissions">Admissions</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-3 footer-links">
+          <h4>Academic Paths</h4>
+          <ul>
+            <li><a href="#academics">Foundation (PP1 - PP2)</a></li>
+            <li><a href="#academics">Primary (Grade 1 - 6)</a></li>
+            <li><a href="#academics">Junior Secondary</a></li>
+            <li><a href="#academics">Secondary Pathways</a></li>
+            <li><a href="#academics">Co-curricular programs</a></li>
+          </ul>
+        </div>
+
+        <div class="col-lg-3 col-md-6 footer-links">
+          <h4>Contact Desk</h4>
+          <p>Jomvu-Jitoni, Mombasa, Kenya</p>
+          <p class="mt-3"><strong>Phone:</strong> +254 724 513928</p>
+          <p><strong>Hours:</strong> Mon - Fri, 8:00 AM - 4:30 PM</p>
+        </div>
+
+      </div>
+    </div>
+
+    <div class="container copyright-section text-center">
+      <p>© Copyright <strong><span>Edward Kings School</span></strong>. All Rights Reserved</p>
+      <div class="credits">
+        Nurturing the Leaders & Innovators of Tomorrow
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scroll Top & WhatsApp -->
+  <a href="#" class="scroll-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="https://wa.me/254724513928" target="_blank" class="whatsapp"><i class="fab fa-whatsapp"></i></a>
+
+  <!-- Preloader -->
+  <div id="preloader"></div>
+
+  <!-- Vendor JS Files -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@srexi/purecounterjs@1.5.0/dist/purecounter_vanilla.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/isotope-layout@3.0.6/dist/isotope.pkgd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/imagesloaded@5.0.0/imagesloaded.pkgd.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/glightbox/dist/js/glightbox.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+  <!-- Main JS File -->
+  <script src="js/script.js"></script>
 </body>
+
 </html>
