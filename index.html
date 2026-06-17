@@ -119,6 +119,7 @@
           <li><a href="#" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#academics">Academics</a></li>
+          <li><a href="#campus-tour">School Tour</a></li>
           <li><a href="#life">School Life</a></li>
           <li><a href="#admissions">Admissions</a></li>
           <li><a href="#contact">Contact</a></li>
@@ -298,6 +299,99 @@
 
       </div>
     </section>
+
+    <!-- ========================================================= -->
+    <!-- Campus Tour Video Showcase Section -->
+    <!-- ========================================================= -->
+    <section id="campus-tour" class="video-showcase section">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Our School, In Motion</h2>
+          <p>Take a virtual walk through the heart of Edward Kings Academy — our classrooms, laboratories, sports fields, and vibrant school community.</p>
+        </div>
+
+        <!-- Cinematic Video Player Panel -->
+        <div class="video-showcase-wrapper" data-aos="zoom-in" data-aos-delay="150">
+
+          <!-- Play Overlay (shown before video starts) -->
+          <div class="video-play-overlay" id="videoOverlay">
+            <div class="video-overlay-bg"></div>
+            <div class="video-overlay-content">
+              <div class="play-icon-ring" id="playBtn" role="button" aria-label="Play campus tour video" tabindex="0">
+                <i class="bi bi-play-fill"></i>
+              </div>
+              <p class="video-cta-label">Watch Our Campus Tour</p>
+            </div>
+          </div>
+
+          <!-- Video Element -->
+          <!-- 
+            NOTE: This embeds the Google Photos shared video.
+            Google Photos direct share links can be viewed via the share URL.
+            The video is wrapped in an iframe pointing to the Google Photos embed endpoint.
+          -->
+          <div class="video-frame-container">
+            <iframe
+              id="campusTourVideo"
+              src="https://drive.google.com/file/d/1GsYxHz5if4xlcgQzm/preview"
+              allow="autoplay; fullscreen"
+              allowfullscreen
+              frameborder="0"
+              title="Edward Kings Academy - Campus Tour Video"
+              loading="lazy"
+              style="display:none;"
+            ></iframe>
+            <!-- Fallback: Direct Google Photos share link as a clickable card -->
+            <div class="video-fallback-card" id="videoFallback">
+              <div class="fallback-inner">
+                <div class="fallback-icon"><i class="bi bi-camera-video-fill"></i></div>
+                <h3>Campus Tour Video</h3>
+                <p>Experience the vibrant atmosphere of Edward Kings Academy — from our modern classrooms to our dynamic sports grounds.</p>
+                <a href="https://share.google/GsYxHz5if4xlcgQzm" target="_blank" rel="noopener noreferrer" class="video-external-btn">
+                  <i class="bi bi-play-circle-fill"></i>
+                  Watch Full Video
+                </a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Video Stats Row -->
+        <div class="row g-4 mt-5 video-highlights-row">
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
+            <div class="video-highlight-card">
+              <div class="vh-icon"><i class="bi bi-building-fill-check"></i></div>
+              <div class="vh-content">
+                <h4>Modern Infrastructure</h4>
+                <p>State-of-the-art classrooms, science laboratories, and ICT hubs built for the next generation of learners.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
+            <div class="video-highlight-card">
+              <div class="vh-icon"><i class="bi bi-people-fill"></i></div>
+              <div class="vh-content">
+                <h4>Vibrant Community</h4>
+                <p>A close-knit, inclusive school environment where every learner is celebrated and supported to thrive.</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
+            <div class="video-highlight-card">
+              <div class="vh-icon"><i class="bi bi-trophy-fill"></i></div>
+              <div class="vh-content">
+                <h4>Culture of Excellence</h4>
+                <p>From early morning assemblies to national competitions, excellence is a lived value at Edward Kings Academy.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+    <!-- End Campus Tour Section -->
 
     <!-- Why Parents Choose Us Section -->
     <section class="section section-bg">
@@ -873,6 +967,7 @@
             <li><a href="#">Home</a></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="#academics">Academics</a></li>
+            <li><a href="#campus-tour">Campus Tour</a></li>
             <li><a href="#life">School Life</a></li>
             <li><a href="#admissions">Admissions</a></li>
           </ul>

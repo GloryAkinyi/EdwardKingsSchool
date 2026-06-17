@@ -245,5 +245,68 @@
       });
     }
 
+    /**
+     * Campus Tour Video — Play Button Interaction
+     * Handles overlay click to reveal the video iframe.
+     * Falls back gracefully to direct link if Google Photos iframe fails to load.
+     */
+    (function initCampusTourVideo() {
+      const overlay  = document.getElementById('videoOverlay');
+      const playBtn  = document.getElementById('playBtn');
+      const iframe   = document.getElementById('campusTourVideo');
+      const fallback = document.getElementById('videoFallback');
+
+      if (!overlay || !playBtn || !iframe || !fallback) return;
+
+      // Attempt to detect if the iframe loaded correctly.
+      // Google Photos shared links typically block iframe embedding (X-Frame-Options).
+      // We'll show the fallback card by default and try the iframe; if it errors, keep fallback.
+      let iframeLoaded = false;
+
+      iframe.addEventListener('load', function() {
+        // Cross-origin load events may still fire even if blocked.
+        // We consider it loaded and visible at this point.
+        iframeLoaded = true;
+      });
+
+      function activateVideo() {
+        // Hide overlay with fade
+        overlay.classList.add('hidden');
+
+        // Show iframe (attempt)
+        iframe.style.display = 'block';
+        fallback.style.display = 'none';
+
+        // After a short delay, verify iframe content is accessible.
+        // If Google Photos blocks the embed, show fallback instead.
+        setTimeout(function() {
+          try {
+            // Attempt access — will throw SecurityError if cross-origin blocked
+            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
+            if (!iframeDoc || iframeDoc.body.innerHTML === '') {
+              showFallback();
+            }
+          } catch (e) {
+            // Cross-origin restriction — show the fallback card
+            showFallback();
+          }
+        }, 2000);
+      }
+
+      function showFallback() {
+        iframe.style.display = 'none';
+        fallback.style.display = 'flex';
+      }
+
+      // Click on overlay or play button
+      overlay.addEventListener('click', activateVideo);
+      playBtn.addEventListener('keydown', function(e) {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          activateVideo();
+        }
+      });
+    })();
+
   });
 })();
