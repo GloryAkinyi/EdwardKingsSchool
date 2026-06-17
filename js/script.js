@@ -246,59 +246,30 @@
     }
 
     /**
-     * Campus Tour Video — Play Button Interaction
-     * Handles overlay click to reveal the video iframe.
-     * Falls back gracefully to direct link if Google Photos iframe fails to load.
+     * Alumni Spotlight Video — Play Button Interaction
+     * Plays local HTML5 video and hides overlay.
      */
-    (function initCampusTourVideo() {
-      const overlay  = document.getElementById('videoOverlay');
-      const playBtn  = document.getElementById('playBtn');
-      const iframe   = document.getElementById('campusTourVideo');
-      const fallback = document.getElementById('videoFallback');
+    (function initAlumniVideo() {
+      const overlay = document.getElementById('videoOverlay');
+      const playBtn = document.getElementById('playBtn');
+      const video  = document.getElementById('alumniVideoNative');
 
-      if (!overlay || !playBtn || !iframe || !fallback) return;
+      if (!overlay || !playBtn || !video) return;
 
-      // Attempt to detect if the iframe loaded correctly.
-      // Google Photos shared links typically block iframe embedding (X-Frame-Options).
-      // We'll show the fallback card by default and try the iframe; if it errors, keep fallback.
-      let iframeLoaded = false;
-
-      iframe.addEventListener('load', function() {
-        // Cross-origin load events may still fire even if blocked.
-        // We consider it loaded and visible at this point.
-        iframeLoaded = true;
-      });
+      var activated = false;
 
       function activateVideo() {
-        // Hide overlay with fade
+        if (activated) return;
+        activated = true;
+
+        // Fade out the overlay
         overlay.classList.add('hidden');
 
-        // Show iframe (attempt)
-        iframe.style.display = 'block';
-        fallback.style.display = 'none';
-
-        // After a short delay, verify iframe content is accessible.
-        // If Google Photos blocks the embed, show fallback instead.
-        setTimeout(function() {
-          try {
-            // Attempt access — will throw SecurityError if cross-origin blocked
-            const iframeDoc = iframe.contentDocument || iframe.contentWindow.document;
-            if (!iframeDoc || iframeDoc.body.innerHTML === '') {
-              showFallback();
-            }
-          } catch (e) {
-            // Cross-origin restriction — show the fallback card
-            showFallback();
-          }
-        }, 2000);
+        // Play the native video
+        video.play();
       }
 
-      function showFallback() {
-        iframe.style.display = 'none';
-        fallback.style.display = 'flex';
-      }
-
-      // Click on overlay or play button
+      // Click anywhere on the overlay or press Enter/Space on the play button
       overlay.addEventListener('click', activateVideo);
       playBtn.addEventListener('keydown', function(e) {
         if (e.key === 'Enter' || e.key === ' ') {
@@ -307,6 +278,19 @@
         }
       });
     })();
+
+    /**
+     * Init swiper sliders
+     */
+    function initSwiper() {
+      document.querySelectorAll('.init-swiper').forEach(function(swiperElement) {
+        let config = JSON.parse(
+          swiperElement.querySelector('.swiper-config').innerHTML.trim()
+        );
+        new Swiper(swiperElement, config);
+      });
+    }
+    window.addEventListener('load', initSwiper);
 
   });
 })();

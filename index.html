@@ -119,8 +119,9 @@
           <li><a href="#" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#academics">Academics</a></li>
-          <li><a href="#campus-tour">School Tour</a></li>
+          <li><a href="#school-spotlight">Our Pride</a></li>
           <li><a href="#life">School Life</a></li>
+          <li><a href="#gallery">Gallery</a></li>
           <li><a href="#admissions">Admissions</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="#admissions" class="btn-admission">Apply Now</a></li>
@@ -301,14 +302,14 @@
     </section>
 
     <!-- ========================================================= -->
-    <!-- Campus Tour Video Showcase Section -->
+    <!-- Alumni Spotlight Video Showcase Section -->
     <!-- ========================================================= -->
-    <section id="campus-tour" class="video-showcase section">
+    <section id="school-spotlight" class="video-showcase section">
       <div class="container" data-aos="fade-up">
 
         <div class="section-title">
-          <h2>Our School, In Motion</h2>
-          <p>Take a virtual walk through the heart of Edward Kings Academy — our classrooms, laboratories, sports fields, and vibrant school community.</p>
+          <h2>Our Pride — Alumni Excellence</h2>
+          <p>One of our finest alumni, a top-performing student who ranked among the best in Mombasa County. This is the story of excellence nurtured at Edward Kings Academy.</p>
         </div>
 
         <!-- Cinematic Video Player Panel -->
@@ -318,72 +319,54 @@
           <div class="video-play-overlay" id="videoOverlay">
             <div class="video-overlay-bg"></div>
             <div class="video-overlay-content">
-              <div class="play-icon-ring" id="playBtn" role="button" aria-label="Play campus tour video" tabindex="0">
+              <div class="play-icon-ring" id="playBtn" role="button" aria-label="Play alumni spotlight video" tabindex="0">
                 <i class="bi bi-play-fill"></i>
               </div>
-              <p class="video-cta-label">Watch Our Campus Tour</p>
+              <p class="video-cta-label">Watch Alumni Spotlight</p>
             </div>
           </div>
 
-          <!-- Video Element -->
-          <!-- 
-            NOTE: This embeds the Google Photos shared video.
-            Google Photos direct share links can be viewed via the share URL.
-            The video is wrapped in an iframe pointing to the Google Photos embed endpoint.
-          -->
+          <!-- Local Video Embed — plays directly on the website -->
           <div class="video-frame-container">
-            <iframe
-              id="campusTourVideo"
-              src="https://drive.google.com/file/d/1GsYxHz5if4xlcgQzm/preview"
-              allow="autoplay; fullscreen"
-              allowfullscreen
-              frameborder="0"
-              title="Edward Kings Academy - Campus Tour Video"
-              loading="lazy"
-              style="display:none;"
-            ></iframe>
-            <!-- Fallback: Direct Google Photos share link as a clickable card -->
-            <div class="video-fallback-card" id="videoFallback">
-              <div class="fallback-inner">
-                <div class="fallback-icon"><i class="bi bi-camera-video-fill"></i></div>
-                <h3>Campus Tour Video</h3>
-                <p>Experience the vibrant atmosphere of Edward Kings Academy — from our modern classrooms to our dynamic sports grounds.</p>
-                <a href="https://share.google/GsYxHz5if4xlcgQzm" target="_blank" rel="noopener noreferrer" class="video-external-btn">
-                  <i class="bi bi-play-circle-fill"></i>
-                  Watch Full Video
-                </a>
-              </div>
-            </div>
+            <video
+              id="alumniVideoNative"
+              src="assets/alumni_video.mp4"
+              controls
+              playsinline
+              preload="metadata"
+              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+              title="Edward Kings Academy — Top Performing Alumni from Mombasa County"
+            ></video>
           </div>
 
         </div>
 
-        <!-- Video Stats Row -->
+        <!-- Highlight Cards Row -->
         <div class="row g-4 mt-5 video-highlights-row">
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
             <div class="video-highlight-card">
-              <div class="vh-icon"><i class="bi bi-building-fill-check"></i></div>
+              <div class="vh-icon"><i class="bi bi-award-fill"></i></div>
               <div class="vh-content">
-                <h4>Modern Infrastructure</h4>
-                <p>State-of-the-art classrooms, science laboratories, and ICT hubs built for the next generation of learners.</p>
+                <h4>Top in Mombasa County</h4>
+                <p>Our alumni consistently rank among the top performers in county and national assessments, a testament to our academic standards.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
             <div class="video-highlight-card">
-              <div class="vh-icon"><i class="bi bi-people-fill"></i></div>
+              <div class="vh-icon"><i class="bi bi-mortarboard-fill"></i></div>
               <div class="vh-content">
-                <h4>Vibrant Community</h4>
-                <p>A close-knit, inclusive school environment where every learner is celebrated and supported to thrive.</p>
+                <h4>Built for Success</h4>
+                <p>From foundational learning to advanced study, we equip every student with the skills and discipline to excel beyond school.</p>
               </div>
             </div>
           </div>
           <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
             <div class="video-highlight-card">
-              <div class="vh-icon"><i class="bi bi-trophy-fill"></i></div>
+              <div class="vh-icon"><i class="bi bi-star-fill"></i></div>
               <div class="vh-content">
-                <h4>Culture of Excellence</h4>
-                <p>From early morning assemblies to national competitions, excellence is a lived value at Edward Kings Academy.</p>
+                <h4>A Legacy of Excellence</h4>
+                <p>Edward Kings Academy continues to produce leaders, scholars, and achievers who make their mark across Kenya and beyond.</p>
               </div>
             </div>
           </div>
@@ -391,7 +374,7 @@
 
       </div>
     </section>
-    <!-- End Campus Tour Section -->
+    <!-- End Alumni Spotlight Section -->
 
     <!-- Why Parents Choose Us Section -->
     <section class="section section-bg">
@@ -741,6 +724,85 @@
       </div>
     </section>
 
+
+    <!-- Visual Gallery Section -->
+    <section id="gallery" class="gallery section section-bg">
+      <div class="container section-title" data-aos="fade-up">
+        <h2>School Gallery</h2>
+        <p>A glimpse into the vibrant daily experiences at Edward Kings Academy.</p>
+      </div>
+
+      <div class="container-fluid" data-aos="fade-up" data-aos-delay="100">
+        <div class="swiper init-swiper gallery-swiper">
+          <script type="application/json" class="swiper-config">
+            {
+              "loop": true,
+              "speed": 600,
+              "autoplay": {
+                "delay": 3000,
+                "disableOnInteraction": false
+              },
+              "slidesPerView": "auto",
+              "centeredSlides": true,
+              "pagination": {
+                "el": ".swiper-pagination",
+                "type": "bullets",
+                "clickable": true
+              },
+              "breakpoints": {
+                "320": {
+                  "slidesPerView": 1,
+                  "spaceBetween": 20
+                },
+                "768": {
+                  "slidesPerView": 3,
+                  "spaceBetween": 20
+                },
+                "1200": {
+                  "slidesPerView": 5,
+                  "spaceBetween": 20
+                }
+              }
+            }
+          </script>
+          <div class="swiper-wrapper align-items-center">
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy.png"><img src="assets/image copy.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy 2.png"><img src="assets/image copy 2.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy 3.png"><img src="assets/image copy 3.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy 4.png"><img src="assets/image copy 4.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy 5.png"><img src="assets/image copy 5.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy 6.png"><img src="assets/image copy 6.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy 7.png"><img src="assets/image copy 7.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy 8.png"><img src="assets/image copy 8.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy 9.png"><img src="assets/image copy 9.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy 10.png"><img src="assets/image copy 10.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy 11.png"><img src="assets/image copy 11.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy 12.png"><img src="assets/image copy 12.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy 13.png"><img src="assets/image copy 13.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy 14.png"><img src="assets/image copy 14.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy 15.png"><img src="assets/image copy 15.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy 16.png"><img src="assets/image copy 16.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy 17.png"><img src="assets/image copy 17.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy 18.png"><img src="assets/image copy 18.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy 19.png"><img src="assets/image copy 19.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy 20.png"><img src="assets/image copy 20.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy 21.png"><img src="assets/image copy 21.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy 22.png"><img src="assets/image copy 22.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy 23.png"><img src="assets/image copy 23.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy 24.png"><img src="assets/image copy 24.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy 25.png"><img src="assets/image copy 25.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy 26.png"><img src="assets/image copy 26.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy 27.png"><img src="assets/image copy 27.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy 28.png"><img src="assets/image copy 28.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy 29.png"><img src="assets/image copy 29.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy 30.png"><img src="assets/image copy 30.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+            <div class="swiper-slide"><a class="glightbox" data-gallery="images-gallery" href="assets/image copy 31.png"><img src="assets/image copy 31.png" class="img-fluid gallery-img" alt="School Activity"></a></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
     <!-- Admissions Process Section -->
     <section id="admissions" class="section">
       <div class="container" data-aos="fade-up">
@@ -967,7 +1029,7 @@
             <li><a href="#">Home</a></li>
             <li><a href="#about">About Us</a></li>
             <li><a href="#academics">Academics</a></li>
-            <li><a href="#campus-tour">Campus Tour</a></li>
+            <li><a href="#school-spotlight">Our Pride</a></li>
             <li><a href="#life">School Life</a></li>
             <li><a href="#admissions">Admissions</a></li>
           </ul>
