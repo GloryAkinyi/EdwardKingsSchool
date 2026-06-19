@@ -363,7 +363,7 @@
           students: [
             { name: 'Phillimon Thoya', marks: 414, secondary: 'Maseno High' },
             { name: 'Gogo Martin Kiti', marks: 394, secondary: 'Kwale Boys High' },
-            { name: 'Njenga George', marks: 392, secondary: '' },
+            { name: 'Njenga George', marks: 392, secondary: 'Kanunga Boys High' },
             { name: 'Onyango Evans', marks: 392, secondary: 'Kanyawanga High' },
             { name: 'Mnjala Harun Mwadime', marks: 375, secondary: 'Kenyatta Mwatate High' }
           ]
