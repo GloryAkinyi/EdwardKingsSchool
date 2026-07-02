@@ -266,6 +266,120 @@ section, .section {
     visibility: visible;
   }
 
+/* Mobile Navigation Toggle Icon */
+.mobile-nav-toggle {
+  color: var(--contrast-color);
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 0;
+  transition: 0.5s;
+  z-index: 9999;
+  margin-left: 15px;
+}
+.mobile-nav-toggle:hover {
+  color: var(--accent-gold);
+}
+
+/* Mobile Navigation Drawer & Dropdown Styling */
+@media (max-width: 1199px) {
+  .mobile-nav-toggle {
+    display: block !important;
+  }
+
+  .navmenu ul {
+    display: none;
+  }
+
+  .mobile-nav-active {
+    overflow: hidden;
+  }
+
+  .mobile-nav-active .mobile-nav-toggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    color: var(--contrast-color);
+  }
+
+  .mobile-nav-active .navmenu {
+    position: fixed;
+    inset: 0;
+    background: rgba(16, 42, 34, 0.96); /* Semi-transparent dark green matching desktop header */
+    backdrop-filter: blur(10px);
+    transition: 0.3s;
+    z-index: 999;
+    overflow-y: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .mobile-nav-active .navmenu ul {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    inset: auto;
+    width: 90%;
+    max-width: 400px;
+    padding: 30px 20px;
+    border-radius: 12px;
+    background: var(--surface-color);
+    border: 1px solid rgba(212, 175, 55, 0.2);
+    box-shadow: 0px 15px 30px rgba(0, 0, 0, 0.2);
+    overflow-y: auto;
+    margin: 0 auto;
+  }
+
+  .mobile-nav-active .navmenu a,
+  .mobile-nav-active .navmenu a:focus {
+    color: var(--heading-color);
+    padding: 12px 20px;
+    font-size: 16px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .mobile-nav-active .navmenu a:hover,
+  .mobile-nav-active .navmenu .active,
+  .mobile-nav-active .navmenu li:hover > a {
+    color: var(--primary-green);
+    background: rgba(15, 93, 70, 0.05);
+  }
+
+  .mobile-nav-active .navmenu .btn-admission {
+    background: var(--accent-gold);
+    color: var(--heading-color) !important;
+    text-align: center;
+    border-radius: 8px;
+    margin-top: 15px;
+    margin-left: 0;
+  }
+
+  /* Mobile Dropdown styles */
+  .navmenu .dropdown ul {
+    position: static;
+    display: none;
+    z-index: 99;
+    padding: 10px 0;
+    margin: 10px 20px;
+    background-color: var(--background-color);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: none;
+    transition: none;
+    visibility: visible;
+    opacity: 1;
+    width: auto;
+    max-width: none;
+  }
+
+  .navmenu .dropdown .dropdown-active {
+    display: block;
+  }
+}
+
 
 /* Admission Button */
 .btn-admission {
@@ -875,6 +989,19 @@ section, .section {
     flex-direction: column;
     align-items: center;
     text-align: center;
+  }
+}
+
+@media (max-width: 992px) {
+  .video-showcase-wrapper {
+    height: auto !important;
+    aspect-ratio: 16/9;
+    min-height: 220px;
+  }
+  .video-frame-container {
+    height: 100% !important;
+    min-height: 100% !important;
+    padding-top: 0 !important;
   }
 }
 

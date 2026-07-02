@@ -118,18 +118,26 @@
       </a>
 
       <nav id="navmenu" class="navmenu">
-        <ul class="d-flex align-items-center m-0">
+        <ul class="m-0">
           <li><a href="#" class="active">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#academics">Academics</a></li>
-          <li><a href="#school-spotlight">Our Pride</a></li>
+          <li class="dropdown">
+            <a href="#school-spotlight"><span>Our Pride</span> <i class="bi bi-chevron-down toggle-dropdown"></i></a>
+            <ul>
+              <li><a href="#school-spotlight">Alumni Spotlight Video</a></li>
+              <li><a href="#national-spotlight">National Media Spotlight</a></li>
+              <li><a href="#hall-of-fame">Academic Hall of Fame</a></li>
+              <li><a href="#placement-analysis">KJSEA Placement Analysis</a></li>
+            </ul>
+          </li>
           <li><a href="#life">School Life</a></li>
           <li><a href="#gallery">Gallery</a></li>
           <li><a href="#admissions">Admissions</a></li>
           <li><a href="#contact">Contact</a></li>
           <li><a href="#admissions" class="btn-admission">Apply Now</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-none fa-solid fa-bars"></i>
+        <i class="mobile-nav-toggle d-xl-none fa-solid fa-bars"></i>
       </nav>
 
     </div>
@@ -380,7 +388,7 @@
           <div class="spotlight-label"><i class="bi bi-newspaper"></i> National Media Spotlight</div>
         </div>
 
-        <div class="eck-spotlight-card" data-aos="fade-up" data-aos-delay="500">
+        <div id="national-spotlight" class="eck-spotlight-card" data-aos="fade-up" data-aos-delay="500">
           <!-- Decorative background elements -->
           <div class="eck-bg-glow"></div>
           <div class="eck-bg-circle"></div>
@@ -450,7 +458,7 @@
         </div>
 
         <!-- ===== Academic Hall of Fame — Top Students Showcase ===== -->
-        <div class="hall-of-fame-section mt-5 pt-5" data-aos="fade-up" data-aos-delay="100">
+        <div id="hall-of-fame" class="hall-of-fame-section mt-5 pt-5" data-aos="fade-up" data-aos-delay="100">
           
           <div class="hof-header text-center mb-5">
             <div class="hof-badge"><i class="bi bi-trophy-fill"></i> Academic Hall of Fame</div>
@@ -506,7 +514,7 @@
         <!-- End Academic Hall of Fame -->
 
         <!-- ===== 2025 Senior School Placement Analysis ===== -->
-        <div class="placement-analysis-section mt-5 pt-5" data-aos="fade-up" data-aos-delay="200">
+        <div id="placement-analysis" class="placement-analysis-section mt-5 pt-5" data-aos="fade-up" data-aos-delay="200">
           
           <div class="hof-header text-center mb-5">
             <div class="hof-badge"><i class="bi bi-bar-chart-fill"></i> Class of 2024 Transition</div>
