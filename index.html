@@ -129,7 +129,7 @@
           <li><a href="#contact">Contact</a></li>
           <li><a href="#admissions" class="btn-admission">Apply Now</a></li>
         </ul>
-        <i class="mobile-nav-toggle d-xl-none fa-solid fa-bars"></i>
+        <i class="mobile-nav-toggle d-none fa-solid fa-bars"></i>
       </nav>
 
     </div>
@@ -316,61 +316,60 @@
           <p>One of our finest alumni, a top-performing student who ranked among the best in Mombasa County. This is the story of excellence nurtured at Edward Kings Academy.</p>
         </div>
 
-        <!-- Cinematic Video Player Panel -->
-        <div class="video-showcase-wrapper" data-aos="zoom-in" data-aos-delay="150">
-
-          <!-- Play Overlay (shown before video starts) -->
-          <div class="video-play-overlay" id="videoOverlay">
-            <div class="video-overlay-bg"></div>
-            <div class="video-overlay-content">
-              <div class="play-icon-ring" id="playBtn" role="button" aria-label="Play alumni spotlight video" tabindex="0">
-                <i class="bi bi-play-fill"></i>
+        <!-- Split Layout for Video and Highlights -->
+        <div class="row g-5 align-items-stretch mt-3">
+          <!-- Cinematic Video Player Panel (Left Column) -->
+          <div class="col-lg-7 col-xl-8">
+            <div class="video-showcase-wrapper h-100" data-aos="zoom-in" data-aos-delay="150">
+              <!-- Play Overlay (shown before video starts) -->
+              <div class="video-play-overlay" id="videoOverlay">
+                <div class="video-overlay-bg"></div>
+                <div class="video-overlay-content">
+                  <div class="play-icon-ring" id="playBtn" role="button" aria-label="Play alumni spotlight video" tabindex="0">
+                    <i class="bi bi-play-fill"></i>
+                  </div>
+                  <p class="video-cta-label">Watch Alumni Spotlight</p>
+                </div>
               </div>
-              <p class="video-cta-label">Watch Alumni Spotlight</p>
-            </div>
-          </div>
 
-          <!-- Local Video Embed — plays directly on the website -->
-          <div class="video-frame-container">
-            <video
-              id="alumniVideoNative"
-              src="assets/alumni_video.mp4"
-              controls
-              playsinline
-              preload="metadata"
-              style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
-              title="Edward Kings Academy — Top Performing Alumni from Mombasa County"
-            ></video>
-          </div>
-
-        </div>
-
-        <!-- Highlight Cards Row -->
-        <div class="row g-4 mt-5 video-highlights-row">
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="100">
-            <div class="video-highlight-card">
-              <div class="vh-icon"><i class="bi bi-award-fill"></i></div>
-              <div class="vh-content">
-                <h4>Top in Mombasa County</h4>
-                <p>Our alumni consistently rank among the top performers in county and national assessments, a testament to our academic standards.</p>
+              <!-- Local Video Embed — plays directly on the website -->
+              <div class="video-frame-container h-100" style="padding-top: 0; min-height: 100%;">
+                <video
+                  id="alumniVideoNative"
+                  src="assets/alumni_video.mp4"
+                  controls
+                  playsinline
+                  preload="metadata"
+                  style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover;"
+                  title="Edward Kings Academy — Top Performing Alumni from Mombasa County"
+                ></video>
               </div>
             </div>
           </div>
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="200">
-            <div class="video-highlight-card">
-              <div class="vh-icon"><i class="bi bi-mortarboard-fill"></i></div>
-              <div class="vh-content">
-                <h4>Built for Success</h4>
-                <p>From foundational learning to advanced study, we equip every student with the skills and discipline to excel beyond school.</p>
+
+          <!-- Highlight Cards Column (Right Column) -->
+          <div class="col-lg-5 col-xl-4">
+            <div class="d-flex flex-column gap-4 video-highlights-col h-100 justify-content-between">
+              <div class="video-highlight-card h-100" data-aos="fade-left" data-aos-delay="100">
+                <div class="vh-icon"><i class="bi bi-award-fill"></i></div>
+                <div class="vh-content">
+                  <h4>Top in Mombasa County</h4>
+                  <p class="mb-0">Our alumni consistently rank among the top performers in county and national assessments, a testament to our academic standards.</p>
+                </div>
               </div>
-            </div>
-          </div>
-          <div class="col-md-4" data-aos="fade-up" data-aos-delay="300">
-            <div class="video-highlight-card">
-              <div class="vh-icon"><i class="bi bi-star-fill"></i></div>
-              <div class="vh-content">
-                <h4>A Legacy of Excellence</h4>
-                <p>Edward Kings Academy continues to produce leaders, scholars, and achievers who make their mark across Kenya and beyond.</p>
+              <div class="video-highlight-card h-100" data-aos="fade-left" data-aos-delay="200">
+                <div class="vh-icon"><i class="bi bi-mortarboard-fill"></i></div>
+                <div class="vh-content">
+                  <h4>Built for Success</h4>
+                  <p class="mb-0">From foundational learning to advanced study, we equip every student with the skills and discipline to excel beyond school.</p>
+                </div>
+              </div>
+              <div class="video-highlight-card h-100" data-aos="fade-left" data-aos-delay="300">
+                <div class="vh-icon"><i class="bi bi-star-fill"></i></div>
+                <div class="vh-content">
+                  <h4>A Legacy of Excellence</h4>
+                  <p class="mb-0">Edward Kings Academy continues to produce leaders, scholars, and achievers who make their mark across Kenya and beyond.</p>
+                </div>
               </div>
             </div>
           </div>
