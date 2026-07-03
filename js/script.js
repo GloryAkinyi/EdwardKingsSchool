@@ -347,9 +347,9 @@
             { name: 'Obed Onano', marks: 417, secondary: 'Alliance Boys High' },
             { name: 'Rajab Sumeiya', marks: 397, secondary: 'Kipsigis Girls' },
             { name: 'Charles Onyiego Maroa', marks: 395, secondary: 'St Joseph Kitale Boys' },
-            { name: 'Joy Marlyne Owino', marks: 392, secondary: 'Asumbi Girls High' },
-            { name: 'Apudo Josphine', marks: 392, secondary: 'Asumbi Girls High' },
-            { name: 'Ibrahim Walid', marks: 391, secondary: 'Orero Boys High' },
+            { name: 'Joymarlin Owino', marks: 392, secondary: 'Alumni Girls' },
+            { name: 'Josphine Apudo', marks: 392, secondary: 'Asumbi' },
+            { name: 'Walid Ibrahim', marks: 391, secondary: 'Orero High' },
             { name: 'Musanzu Furaha', marks: 388, secondary: 'Kakamega High' }
           ]
         },
