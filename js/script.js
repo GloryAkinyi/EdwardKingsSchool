@@ -66,17 +66,20 @@
 
     /**
      * Preloader
+     * Dismissed on DOMContentLoaded (HTML parsed & ready) rather than
+     * window.load (which waits for ALL assets incl. the 15 MB video).
+     * This makes the page appear almost instantly.
      */
     const preloader = document.querySelector('#preloader');
     if (preloader) {
-      window.addEventListener('load', () => {
+      // Use a short timeout so the first paint can happen before we fade out.
+      setTimeout(() => {
+        preloader.style.transition = 'opacity 0.4s ease';
+        preloader.style.opacity = '0';
         setTimeout(() => {
-          preloader.style.opacity = '0';
-          setTimeout(() => {
-            preloader.remove();
-          }, 600);
-        }, 300);
-      });
+          preloader.remove();
+        }, 450);
+      }, 200);
     }
 
     /**
