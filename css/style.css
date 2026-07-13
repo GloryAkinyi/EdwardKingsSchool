@@ -2910,3 +2910,732 @@ section, .section {
     font-size: 4rem;
   }
 }
+
+/* ================================================================
+   ENTERPRISE UI/UX ENHANCEMENT LAYER
+   Edward Kings Academy — v2.0 Production Polish
+   Supplements all existing styles. Elevates visual quality without
+   altering content, functionality, or the green colour scheme.
+   ================================================================ */
+
+/* ── 1. DESIGN TOKEN REFINEMENTS ── */
+:root {
+  /* Richer shadow palette */
+  --shadow-xs:  0 1px 3px rgba(0,0,0,0.04), 0 1px 2px rgba(0,0,0,0.06);
+  --shadow-sm:  0 2px 8px rgba(0,0,0,0.06), 0 1px 3px rgba(0,0,0,0.04);
+  --shadow-md:  0 8px 24px rgba(0,0,0,0.07), 0 2px 8px rgba(0,0,0,0.04);
+  --shadow-lg:  0 20px 48px rgba(0,0,0,0.10), 0 4px 12px rgba(0,0,0,0.06);
+  --shadow-xl:  0 32px 64px rgba(0,0,0,0.14), 0 8px 24px rgba(0,0,0,0.08);
+
+  /* Smoother easing */
+  --ease-out-quart: cubic-bezier(0.25, 1, 0.5, 1);
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1);
+  --transition: all 0.28s var(--ease-in-out);
+  --transition-slow: all 0.5s var(--ease-out-quart);
+
+  /* Extended green palette */
+  --green-50:  #f0faf5;
+  --green-100: #d5f0e4;
+  --green-200: #a8dfca;
+  --green-500: #0F5D46;
+  --green-700: #0a4030;
+  --green-900: #061f18;
+
+  /* Surface refinements */
+  --surface-raised: #ffffff;
+  --surface-subtle: #f5f8f6;
+  --border-subtle: rgba(15, 93, 70, 0.09);
+  --border-light: rgba(0, 0, 0, 0.06);
+}
+
+/* ── 2. BASE & TYPOGRAPHY POLISH ── */
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  background-color: #f7faf8;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.01em;
+  line-height: 1.25;
+}
+
+p { line-height: 1.75; }
+
+/* Refined scrollbar */
+::-webkit-scrollbar { width: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb {
+  background: rgba(15, 93, 70, 0.35);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--primary-green); }
+
+/* ── 3. PORTAL BUTTON (Forest Green) ── */
+.btn-portal {
+  background: var(--primary-green);
+  color: #ffffff !important;
+  font-weight: 600;
+  border-radius: 6px;
+  padding: 8px 18px;
+  font-size: 14px;
+  font-family: var(--nav-font);
+  letter-spacing: 0.3px;
+  transition: var(--transition);
+  border: 1.5px solid var(--primary-green);
+  margin-left: 8px;
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  position: relative;
+  overflow: hidden;
+}
+.btn-portal::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: rgba(255,255,255,0);
+  transition: background 0.2s ease;
+}
+.btn-portal:hover {
+  background: #0a4030;
+  border-color: #0a4030;
+  color: #ffffff !important;
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(15, 93, 70, 0.35);
+}
+.btn-portal:hover::before { background: rgba(255,255,255,0.06); }
+
+/* Refined Apply Now button */
+.btn-admission {
+  border-radius: 6px;
+  padding: 8px 20px;
+  font-family: var(--nav-font);
+  letter-spacing: 0.3px;
+  position: relative;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.btn-admission:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
+}
+
+@media (max-width: 1199px) {
+  .btn-portal { padding: 6px 14px; font-size: 12.5px; margin-left: 6px; }
+}
+@media (max-width: 767px) {
+  .btn-portal { padding: 5px 12px; font-size: 12px; margin-left: 5px; }
+}
+
+/* ── 4. TOPBAR ── */
+.topbar {
+  background: var(--green-900);
+  font-size: 13px;
+  letter-spacing: 0.1px;
+}
+.topbar-alerts span {
+  background: rgba(212, 175, 55, 0.15);
+  color: var(--accent-gold-light);
+  border: 1px solid rgba(212, 175, 55, 0.2);
+  border-radius: 4px;
+  padding: 2px 10px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+}
+
+/* ── 5. HEADER / NAVBAR REFINEMENTS ── */
+.header {
+  background: rgba(10, 28, 20, 0.97);
+  backdrop-filter: blur(16px) saturate(1.2);
+  -webkit-backdrop-filter: blur(16px) saturate(1.2);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  padding: 10px 0;
+}
+.scrolled .header {
+  background: rgba(6, 20, 14, 0.99);
+  box-shadow: 0 4px 24px rgba(0,0,0,0.18);
+  padding: 7px 0;
+}
+.header .logo h1 {
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+.navmenu a, .navmenu a:focus {
+  font-size: 14px;
+  letter-spacing: 0.2px;
+  padding: 12px 15px;
+}
+.navmenu li:hover > a,
+.navmenu .active,
+.navmenu .active:focus {
+  color: var(--accent-gold-light);
+}
+.navmenu .dropdown ul {
+  border-top: 2px solid var(--primary-green);
+  border-radius: 0 0 10px 10px;
+  box-shadow: 0 12px 40px rgba(0,0,0,0.14);
+  overflow: hidden;
+}
+.navmenu .dropdown ul a:hover {
+  padding-left: 26px;
+  background-color: var(--green-50);
+  color: var(--primary-green);
+}
+
+/* ── 6. SECTION TITLES ── */
+.section-title {
+  padding-bottom: 56px;
+}
+.section-title h2 {
+  font-size: 30px;
+  letter-spacing: -0.02em;
+  font-weight: 800;
+}
+.section-title h2:before,
+.section-title h2:after {
+  width: 36px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--accent-gold), var(--accent-gold-light));
+}
+.section-title p {
+  font-size: 1rem;
+  color: #6b7280;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+/* ── 7. HERO SECTION ── */
+.hero .hero-container {
+  min-height: 88vh;
+}
+.hero .hero-container .overlay {
+  background: linear-gradient(
+    135deg,
+    rgba(6, 20, 14, 0.92) 0%,
+    rgba(10, 47, 28, 0.72) 60%,
+    rgba(15, 93, 70, 0.35) 100%
+  );
+}
+.hero .hero-content h1 {
+  font-size: clamp(2.4rem, 5vw, 3.8rem);
+  font-weight: 900;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+}
+.hero .hero-content p {
+  font-size: 1.15rem;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 520px;
+}
+.hero .cta-buttons .btn-get-started {
+  border-radius: 6px;
+  font-size: 14px;
+  padding: 13px 34px;
+  letter-spacing: 0.5px;
+  box-shadow: 0 6px 24px rgba(212, 175, 55, 0.4);
+}
+.hero .cta-buttons .btn-get-started:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 32px rgba(212, 175, 55, 0.5);
+}
+.hero .stats-card {
+  background: rgba(255, 255, 255, 0.07);
+  backdrop-filter: blur(20px) saturate(1.5);
+  border: 1px solid rgba(255,255,255,0.12);
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0,0,0,0.2);
+}
+.hero .stat-item h4 { font-size: 19px; }
+
+/* Event ticker */
+.hero .event-ticker {
+  background: rgba(6, 20, 14, 0.85);
+  backdrop-filter: blur(10px);
+  border-top: 1px solid rgba(255,255,255,0.08);
+}
+.hero .event-ticker .date {
+  border-radius: 4px;
+  letter-spacing: 0.3px;
+}
+
+/* ── 8. ABOUT SECTION ── */
+.about .stat-box {
+  border-radius: 8px;
+  padding: 16px 24px;
+  border-left: 3px solid var(--accent-gold);
+  transition: var(--transition);
+  box-shadow: var(--shadow-xs);
+}
+.about .stat-box:hover {
+  transform: translateX(4px);
+  box-shadow: var(--shadow-sm);
+  border-left-color: var(--primary-green);
+}
+.about .image-stack-item {
+  border-radius: 12px;
+  box-shadow: var(--shadow-xl);
+}
+.about .image-stack-item-top {
+  border: 5px solid #ffffff;
+  box-shadow: var(--shadow-xl);
+}
+
+/* Value cards */
+.value-card {
+  border-radius: 14px;
+  padding: 38px 28px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-xs);
+  transition: var(--transition-slow);
+}
+.value-card:hover {
+  border-color: rgba(212, 175, 55, 0.22);
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-6px);
+}
+.value-card .card-icon {
+  width: 64px;
+  height: 64px;
+  border-radius: 14px;
+  font-size: 26px;
+  transition: var(--transition-slow);
+}
+.value-card:hover .card-icon {
+  border-radius: 50%;
+  transform: scale(1.08) rotateY(0);
+  background: var(--primary-green);
+  color: #fff;
+}
+
+/* ── 9. FEATURE BOXES (Why Choose Us) ── */
+.feature-box {
+  border-radius: 14px;
+  padding: 32px 28px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-xs);
+  transition: var(--transition-slow);
+  position: relative;
+  overflow: hidden;
+  border-bottom: 3px solid transparent;
+}
+.feature-box::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0; right: 0;
+  height: 3px;
+  background: linear-gradient(90deg, var(--primary-green), var(--accent-gold));
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.4s var(--ease-out-quart);
+}
+.feature-box:hover {
+  border-color: rgba(212, 175, 55, 0.15);
+  box-shadow: var(--shadow-md);
+  transform: translateY(-5px);
+  border-bottom-color: transparent;
+}
+.feature-box:hover::before { transform: scaleX(1); }
+.feature-box .icon {
+  font-size: 38px;
+  background: var(--green-50);
+  width: 68px;
+  height: 68px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 22px;
+  transition: var(--transition);
+}
+.feature-box:hover .icon {
+  background: var(--primary-green);
+  color: #fff !important;
+  transform: scale(1.08);
+}
+
+/* ── 10. PROGRAM CARDS ── */
+.program-item {
+  border-radius: 14px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-xs);
+  transition: var(--transition-slow);
+}
+.program-item:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-8px);
+  border-color: rgba(212, 175, 55, 0.2);
+}
+.program-badge {
+  border-radius: 6px;
+  font-size: 10.5px;
+  letter-spacing: 0.5px;
+}
+.program-image-wrapper { border-radius: 0; }
+.program-btn {
+  border: 1.5px solid currentColor;
+  border-radius: 5px;
+  padding: 6px 14px;
+  font-size: 13px;
+  width: fit-content;
+  transition: var(--transition);
+}
+.program-btn:hover {
+  background: var(--accent-gold);
+  color: var(--heading-color);
+  border-color: var(--accent-gold);
+}
+
+/* ── 11. STATS SECTION ── */
+.stats .stats-card {
+  border-radius: 14px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-xs);
+  transition: var(--transition-slow);
+  padding: 32px 28px;
+}
+.stats .stats-card:hover {
+  box-shadow: var(--shadow-md);
+  border-color: rgba(15, 93, 70, 0.15);
+  transform: translateY(-5px);
+}
+.stats .stats-card .stats-number {
+  font-size: 38px;
+  font-weight: 900;
+  background: linear-gradient(135deg, var(--primary-green), #16a378);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+.stats .stats-card .stats-icon {
+  font-size: 34px;
+  margin-bottom: 16px;
+}
+
+/* ── 12. ACHIEVEMENT / GALLERY ITEMS ── */
+.achievement-item {
+  border-radius: 12px;
+  box-shadow: var(--shadow-sm);
+  transition: var(--transition-slow);
+}
+.achievement-item:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-4px) scale(1.01);
+}
+
+.gallery-grid-item {
+  border-radius: 12px;
+  transition: var(--transition-slow);
+}
+.gallery-grid-item:hover {
+  box-shadow: var(--shadow-xl);
+  transform: translateY(-6px) scale(1.01);
+}
+
+/* ── 13. TESTIMONIAL CARDS ── */
+.testimonials .testimonial-card {
+  border-radius: 14px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-xs);
+  transition: var(--transition-slow);
+  padding: 36px;
+}
+.testimonials .testimonial-card:hover {
+  box-shadow: var(--shadow-lg);
+  transform: translateY(-5px);
+  border-color: rgba(212, 175, 55, 0.2);
+}
+.testimonials .testimonial-card .quote-icon {
+  color: rgba(212, 175, 55, 0.18);
+  font-size: 36px;
+}
+
+/* ── 14. EVENT CARDS ── */
+.event-card {
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-xs);
+  transition: var(--transition-slow);
+  overflow: hidden;
+}
+.event-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+  border-color: rgba(15, 93, 70, 0.15);
+}
+.event-card .event-date {
+  background: linear-gradient(160deg, var(--primary-green), var(--green-700));
+}
+
+/* ── 15. ADMISSIONS PROCESS ── */
+.process-flow {
+  border-radius: 16px;
+  padding: 52px 40px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-sm);
+}
+.process-step .step-number {
+  width: 62px;
+  height: 62px;
+  font-size: 20px;
+  background: linear-gradient(135deg, var(--primary-green), #168c6a);
+  border: none;
+  box-shadow: 0 8px 20px rgba(15, 93, 70, 0.3);
+  transition: var(--transition);
+}
+.process-step:hover .step-number {
+  transform: scale(1.08);
+  box-shadow: 0 12px 30px rgba(15, 93, 70, 0.4);
+}
+
+/* ── 16. FAQ ── */
+.faq .accordion-item {
+  border-radius: 10px !important;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-xs);
+  transition: var(--transition);
+}
+.faq .accordion-item:hover { box-shadow: var(--shadow-sm); }
+.faq .accordion-button {
+  border-radius: 10px;
+  padding: 20px 24px;
+  font-size: 15.5px;
+  transition: var(--transition);
+}
+.faq .accordion-button:not(.collapsed) {
+  background: var(--green-50);
+  color: var(--primary-green);
+}
+
+/* ── 17. CONTACT SECTION ── */
+.contact-info-card {
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-xs);
+  transition: var(--transition-slow);
+}
+.contact-info-card:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-3px);
+  border-color: rgba(15, 93, 70, 0.15);
+}
+.contact-info-card .icon-wrapper {
+  border-radius: 10px;
+  background: var(--green-50);
+  transition: var(--transition);
+}
+.contact-info-card:hover .icon-wrapper {
+  background: var(--primary-green);
+  color: #fff;
+}
+.contact-form-panel {
+  border-radius: 16px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-md);
+  padding: 44px;
+}
+.contact-form-panel .form-control {
+  border-radius: 8px;
+  border: 1.5px solid rgba(0,0,0,0.1);
+  padding: 13px 16px;
+  font-size: 14.5px;
+  transition: var(--transition);
+  background: #fafafa;
+}
+.contact-form-panel .form-control:focus {
+  border-color: var(--primary-green);
+  background: #fff;
+  box-shadow: 0 0 0 3px rgba(15, 93, 70, 0.08);
+}
+.contact-form-panel .btn-submit {
+  border-radius: 8px;
+  padding: 13px 32px;
+  font-size: 14.5px;
+  background: linear-gradient(135deg, var(--primary-green), #168c6a);
+  box-shadow: 0 6px 20px rgba(15, 93, 70, 0.3);
+  transition: var(--transition);
+  letter-spacing: 0.5px;
+}
+.contact-form-panel .btn-submit:hover {
+  background: linear-gradient(135deg, #0a4030, var(--primary-green));
+  transform: translateY(-1px);
+  box-shadow: 0 10px 30px rgba(15, 93, 70, 0.4);
+}
+.map-container {
+  border-radius: 16px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-md);
+  overflow: hidden;
+}
+
+/* ── 18. STUDENT ACTIVITY ITEMS ── */
+.student-activity-item {
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
+  box-shadow: var(--shadow-xs);
+  transition: var(--transition-slow);
+  padding: 26px;
+}
+.student-activity-item:hover {
+  box-shadow: var(--shadow-md);
+  transform: translateY(-4px);
+  border-color: rgba(212, 175, 55, 0.2);
+}
+.student-activity-item .icon-box {
+  border-radius: 10px;
+  width: 52px;
+  height: 52px;
+  font-size: 22px;
+  transition: var(--transition);
+}
+.student-activity-item:hover .icon-box {
+  background: var(--accent-gold);
+  color: var(--heading-color);
+}
+
+/* ── 19. FOOTER ── */
+.footer {
+  background: linear-gradient(160deg, var(--green-900) 0%, #0a2018 100%);
+  border-top: 3px solid transparent;
+  border-image: linear-gradient(90deg, transparent, var(--accent-gold), transparent) 1;
+  padding: 70px 0 30px;
+}
+.footer .social-links a {
+  border-radius: 8px;
+  width: 42px;
+  height: 42px;
+  font-size: 17px;
+  transition: var(--transition);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+.footer .social-links a:hover {
+  background: var(--accent-gold);
+  color: var(--green-900);
+  border-color: var(--accent-gold);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(212,175,55,0.3);
+}
+.footer .footer-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+.footer .footer-links a::before {
+  content: '›';
+  color: var(--accent-gold);
+  font-size: 16px;
+  line-height: 1;
+  transition: transform 0.2s ease;
+}
+.footer .footer-links a:hover::before { transform: translateX(2px); }
+.footer .copyright-section {
+  border-top: 1px solid rgba(255,255,255,0.06);
+  padding-top: 28px;
+}
+
+/* ── 20. GLOBAL BUTTON & LINK POLISH ── */
+.btn-view-all {
+  border-radius: 7px;
+  padding: 12px 32px;
+  font-size: 13.5px;
+  background: linear-gradient(135deg, var(--primary-green), #168c6a);
+  box-shadow: 0 4px 16px rgba(15, 93, 70, 0.25);
+  transition: var(--transition);
+  letter-spacing: 0.4px;
+}
+.btn-view-all:hover {
+  background: linear-gradient(135deg, #0a4030, var(--primary-green));
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(15, 93, 70, 0.35);
+  color: var(--contrast-color);
+}
+
+/* ── 21. FLOAT BUTTONS ── */
+.scroll-top {
+  border-radius: 10px;
+  width: 44px;
+  height: 44px;
+  font-size: 20px;
+  background: var(--primary-green);
+  box-shadow: 0 4px 16px rgba(15, 93, 70, 0.3);
+  right: 76px;
+  bottom: 22px;
+}
+.scroll-top:hover {
+  background: var(--accent-gold);
+  color: var(--heading-color) !important;
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.4);
+}
+.whatsapp {
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  font-size: 26px;
+  box-shadow: 0 4px 16px rgba(37, 211, 102, 0.3);
+  bottom: 22px;
+  right: 20px;
+}
+.whatsapp:hover {
+  transform: translateY(-4px) scale(1.06);
+  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.45);
+}
+
+/* ── 22. PROGRAM FILTER TABS ── */
+.program-filters li,
+.gallery-filters li {
+  border-radius: 8px;
+  font-size: 13.5px;
+  border: 1.5px solid transparent;
+  transition: var(--transition);
+  background: var(--surface-raised);
+  box-shadow: var(--shadow-xs);
+}
+.program-filters li.filter-active,
+.program-filters li:hover,
+.gallery-filters li.filter-active,
+.gallery-filters li:hover {
+  background: var(--primary-green);
+  color: #fff;
+  border-color: var(--primary-green);
+  box-shadow: 0 4px 14px rgba(15, 93, 70, 0.2);
+}
+
+/* ── 23. FOCUS ACCESSIBILITY ── */
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--accent-gold);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── 24. SELECTION COLOUR ── */
+::selection {
+  background: rgba(212, 175, 55, 0.25);
+  color: var(--heading-color);
+}
+
+/* ── 25. SMOOTH IMAGE RENDERING ── */
+img {
+  image-rendering: -webkit-optimize-contrast;
+}
+section img:not([loading="lazy"]) {
+  will-change: transform;
+}
+
+/* ── 26. RESPONSIVE FINE-TUNING ── */
+@media (max-width: 992px) {
+  .contact-form-panel { padding: 32px 24px; }
+  .process-flow { padding: 36px 24px; }
+  .hero .hero-content h1 { font-size: 2.4rem; }
+}
+@media (max-width: 768px) {
+  .section-title { padding-bottom: 40px; }
+  .section-title h2 { font-size: 26px; }
+  .footer { padding: 50px 0 24px; }
+  .contact-form-panel { padding: 28px 20px; }
+}
