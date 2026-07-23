@@ -1,5 +1,5 @@
 /**
- * Edward Kings Academy - Premium Interactions
+ * Edward Kings Schools - Premium Interactions
  * Handles animations, sticky navbar, mobile menus, statistic counters,
  * pathways filtering, and contact form operations.
  */
@@ -341,7 +341,7 @@
       if (!grid || !tabContainer) return;
 
       // ── Top Students Data (KCPE marks out of 500) ──
-      // Actual student records from Edward Kings Academy
+      // Actual student records from Edward Kings Schools
       const studentsData = {
         2023: {
           students: [
