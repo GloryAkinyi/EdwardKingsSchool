@@ -10,6 +10,33 @@
   document.addEventListener('DOMContentLoaded', () => {
     
     /**
+     * Hero Background Video Guarantee & Celebration Segment Loop
+     */
+    const heroVideo = document.querySelector('.hero-video-bg');
+    if (heroVideo) {
+      heroVideo.muted = true;
+      const START_TIME = 100;
+      const END_TIME = 111;
+
+      heroVideo.addEventListener('timeupdate', () => {
+        if (heroVideo.currentSrc && heroVideo.currentSrc.includes('alumni_video.mp4')) {
+          if (heroVideo.currentTime >= END_TIME || heroVideo.currentTime < START_TIME) {
+            heroVideo.currentTime = START_TIME;
+          }
+        }
+      });
+
+      const playPromise = heroVideo.play();
+      if (playPromise !== undefined) {
+        playPromise.catch(() => {
+          // Autoplay policy fallback: re-attempt play on user interaction
+          document.addEventListener('touchstart', () => heroVideo.play(), { once: true });
+          document.addEventListener('click', () => heroVideo.play(), { once: true });
+        });
+      }
+    }
+
+    /**
      * Apply .scrolled class to the body as the page is scrolled down
      */
     function toggleScrolled() {
