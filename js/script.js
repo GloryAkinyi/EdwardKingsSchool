@@ -192,6 +192,8 @@
       const isotopeLayouts = document.querySelectorAll('.isotope-layout');
       if (isotopeLayouts.length > 0 && typeof Isotope !== 'undefined') {
         isotopeLayouts.forEach(function(isotopeItem) {
+          if (isotopeItem.closest('#gallery') !== null) return;
+
           let layout = isotopeItem.getAttribute('data-layout') ?? 'masonry';
           let filter = isotopeItem.getAttribute('data-default-filter') ?? '*';
           let sort = isotopeItem.getAttribute('data-sort') ?? 'original-order';
@@ -234,7 +236,131 @@
         });
       }
     }
-    window.addEventListener('load', initIsotope);
+
+    /**
+     * Gallery Carousels initialization and tab switching
+     */
+    function initGalleryCarousels() {
+      const gallerySection = document.getElementById('gallery');
+      if (!gallerySection) return;
+
+      const filterBtns = gallerySection.querySelectorAll('.gallery-filters li');
+      const carousels = gallerySection.querySelectorAll('.gallery-carousel-wrapper');
+
+      // 1. Calculate count badges dynamically
+      carousels.forEach(wrapper => {
+        const id = wrapper.getAttribute('id');
+        const count = wrapper.querySelectorAll('.swiper-slide').length;
+        const targetBtn = gallerySection.querySelector(`.gallery-filters li[data-target="${id}"]`);
+        if (targetBtn && count > 0) {
+          const badge = document.createElement('span');
+          badge.className = 'filter-count-badge';
+          badge.textContent = `(${count})`;
+          targetBtn.appendChild(badge);
+        }
+      });
+
+      // 2. Remove shimmer skeletons on image load
+      gallerySection.querySelectorAll('.gallery-slide-card img').forEach(img => {
+        const card = img.closest('.gallery-slide-card');
+        if (card) {
+          if (img.complete) {
+            card.classList.add('img-loaded');
+          } else {
+            img.addEventListener('load', () => card.classList.add('img-loaded'));
+            img.addEventListener('error', () => card.classList.add('img-loaded'));
+          }
+        }
+      });
+
+      // 3. Initialize Swiper instances
+      const swiperInstances = {};
+      carousels.forEach(wrapper => {
+        const id = wrapper.getAttribute('id');
+        const swiperEl = wrapper.querySelector('.gallery-swiper');
+        if (swiperEl && typeof Swiper !== 'undefined') {
+          swiperInstances[id] = new Swiper(swiperEl, {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true,
+            observer: true,
+            observeParents: true,
+            autoplay: {
+              delay: 3500,
+              disableOnInteraction: false,
+            },
+            navigation: {
+              nextEl: wrapper.querySelector('.swiper-button-next'),
+              prevEl: wrapper.querySelector('.swiper-button-prev'),
+            },
+            pagination: {
+              el: wrapper.querySelector('.swiper-pagination'),
+              clickable: true,
+            },
+            breakpoints: {
+              576: {
+                slidesPerView: 2,
+                spaceBetween: 20
+              },
+              992: {
+                slidesPerView: 3,
+                spaceBetween: 30
+              }
+            }
+          });
+        }
+      });
+
+      // 4. Tab Switching logic
+      filterBtns.forEach(btn => {
+        btn.addEventListener('click', function() {
+          const activeBtn = gallerySection.querySelector('.gallery-filters li.filter-active');
+          if (activeBtn) activeBtn.classList.remove('filter-active');
+          this.classList.add('filter-active');
+
+          const targetId = this.getAttribute('data-target');
+          carousels.forEach(wrapper => {
+            if (wrapper.getAttribute('id') === targetId) {
+              wrapper.style.display = 'block';
+              // Force redraw for opacity transition
+              wrapper.offsetHeight; 
+              wrapper.classList.add('active');
+              
+              // Update Swiper layout and restart autoplay
+              if (swiperInstances[targetId]) {
+                swiperInstances[targetId].update();
+                if (swiperInstances[targetId].autoplay) {
+                  swiperInstances[targetId].autoplay.start();
+                }
+              }
+            } else {
+              wrapper.classList.remove('active');
+              wrapper.style.display = 'none';
+              
+              // Stop autoplay on hidden swipers
+              const wrapperId = wrapper.getAttribute('id');
+              if (swiperInstances[wrapperId] && swiperInstances[wrapperId].autoplay) {
+                swiperInstances[wrapperId].autoplay.stop();
+              }
+            }
+          });
+
+          // Refresh GLightbox to bind to the currently visible gallery links
+          if (typeof GLightbox !== 'undefined') {
+            GLightbox({
+              selector: '.glightbox'
+            });
+          }
+          
+          aosInit();
+        });
+      });
+    }
+
+    window.addEventListener('load', function() {
+      initIsotope();
+      initGalleryCarousels();
+    });
 
     /**
      * Initiate GLightbox (for video, photos)
